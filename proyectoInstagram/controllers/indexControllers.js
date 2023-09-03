@@ -1,5 +1,4 @@
-
-const instagramControllers ={
+const controlador ={
     index :  function(req, res, next) {
         res.render('index', { title: 'Express' });
       }, 
@@ -8,4 +7,4 @@ const instagramControllers ={
       },   
 }
 
-module.exports = instagramControllers;
+module.exports = controlador;

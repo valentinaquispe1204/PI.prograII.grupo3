@@ -7,7 +7,7 @@ const userControllers = require("../controllers/usersControllers")
 router.get('/detalleUsuario', userControllers.detalleUsuario);
 router.get('/editarPerfil', userControllers.editarPerfil);
 router.get('/login', userControllers.login);
-router.get('/miperfil', userControllers.miperfil);
+router.get('/miPerfil', userControllers.miPerfil);
 router.get('/registracion', userControllers.registracion);
 
 module.exports = router;
