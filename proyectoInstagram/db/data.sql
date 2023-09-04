@@ -1,5 +1,4 @@
 CREATE SCHEMA TPI_PROGRAII;
-
 USE TPI_PROGRAII;
 
 /* ----------------- TABLA DE USUARIOS ------------------------------- */
@@ -11,13 +10,11 @@ pass							VARCHAR(45)			NOT NULL,
 fotoDePerfil					VARCHAR(200)		NOT NULL,
 fecha							TIMESTAMP			NOT NULL,
 dni								INT					NOT NULL,
-
 /* campos de auditoria */
 createdAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP,
 updatedAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 deletedAt						TIMESTAMP			NULL
 );
-
 
 /*------------------ TABLA DE POSTEOS ------------------------------- */
 CREATE TABLE posteo(
@@ -25,13 +22,10 @@ CREATE TABLE posteo(
 idPosteo						INT					UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 nombreImagen					VARCHAR(200)		NOT NULL,
 piePost							VARCHAR(200)		NOT NULL,
-
 /* columna para el FOREIGN KEY */
 idUsuario						INT 				UNSIGNED NOT NULL,
-
 /* referenciando la FOREIGN KEY */
 FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
-
 /* campos de auditoria */
 createdAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP,
 updatedAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -44,22 +38,21 @@ CREATE TABLE comentario(
 /* nombreColumna				tipoDato			restricciones/connstraints (unsigned=numeros positivos)*/
 idComentario					INT					UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 textoComentario					VARCHAR(200)		NOT NULL,
-
 /* columna para los FOREIGN KEYs */
 idPosteo						INT 				UNSIGNED NOT NULL,
 idUsuario						INT 				UNSIGNED NOT NULL,
-
 /* referenciando las FOREIGN KEYs */
 FOREIGN KEY (idPosteo) REFERENCES posteo(idPosteo),
 FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario),
-
 /* campos de auditoria */
 createdAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP,
 updatedAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 deletedAt						TIMESTAMP			NULL
 );
 
-/* DATOS PARA TABLA USUARIOS*/
+
+
+/* -------------------------------- DATOS PARA TABLA USUARIOS ----------------------------*/
 
 INSERT INTO usuario (idUsuario, arroba, pass, fotoDePerfil, fecha, dni, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "micaschachtl", 2502,  "",  "2003-02-25 00:00:00", 44713206, DEFAULT, DEFAULT, DEFAULT); 
 INSERT INTO usuario (idUsuario, arroba, pass, fotoDePerfil, fecha, dni, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "valitaquispe", 1204,  "", "2004-04-12 12:00:00", 45547793, DEFAULT, DEFAULT, DEFAULT); 
@@ -69,4 +62,45 @@ INSERT INTO usuario (idUsuario, arroba, pass, fotoDePerfil, fecha, dni, createdA
 
 
 
+/* -------------------------------- DATOS PARA TABLA POSTEOS ----------------------------*/
+/* POSTS DE USUARIO 1*/
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
 
+/* POSTS DE USUARIO 2*/
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2", DEFAULT, DEFAULT, DEFAULT); 
+
+/* POSTS DE USUARIO 3*/
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3", DEFAULT, DEFAULT, DEFAULT); 
+
+/* POSTS DE USUARIO 4*/
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4", DEFAULT, DEFAULT, DEFAULT); 
+
+/* POSTS DE USUARIO 5*/
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5", DEFAULT, DEFAULT, DEFAULT); 
+
+
+
+/* -------------------------------- DATOS PARA TABLA COMENTARIOS ----------------------------*/
