@@ -1,3 +1,4 @@
+var db = require("../db/data")
 const userControllers = {
     detalleUsuario : function(req, res, next) {
         res.render('detalleUsuario', { title: 'Express' });
