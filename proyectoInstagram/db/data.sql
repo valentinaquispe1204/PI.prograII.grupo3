@@ -105,62 +105,62 @@ INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updat
 
 /* -------------------------------- DATOS PARA TABLA COMENTARIOS ----------------------------*/
 /*4 comentarios para post 1*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,"",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 2*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "2",  "1", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 3*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,"",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,"",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,"",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,"",  "3",  "1", DEFAULT, DEFAULT, DEFAULT);
 /*4 comentarios para post 4*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "4",  "1", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 5*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "5",  "1", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 6*/
 
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "6",  "1", DEFAULT, DEFAULT, DEFAULT);
 /*4 comentarios para post 7*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 8*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "8",  "1", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 9*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "9",  "2", DEFAULT, DEFAULT, DEFAULT);
 /*4 comentarios para post 10*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "10",  "2", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 11*/
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "11",  "2", DEFAULT, DEFAULT, DEFAULT);
