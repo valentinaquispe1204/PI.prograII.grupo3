@@ -5,7 +5,30 @@
 <main>
     <section class="center main-content">
     <h1>Nuevo Post</h1>
-    <p>Crear el formulario para cargar un nuevo posteo.</p>
+    <p></p>
+    <div class="container products-wrapper">	
+    </div>
+        <div class="form-wrapper">
+            <h1 class="formulario1">Añadir post</h1>
+            <form class="form" method="post" action="/producst/agregarPost" enctype="multipart/form-data" >
+                <div class="form-item">
+                    
+                    <input type="text" name="title" required="required" placeholder="tematica de la foto"></input>
+                    <input type="text" name="description" placeholder="Descripción"> <br>
+                    <input type="file"	name="cover" placeholder="cover"> 
+                    
+                </div>
+                <div class="button-panel">
+                <input type="submit" class="button" title="" value="Añadir"></input>
+            </div>
+    
+            </form>
+    </div>
+    
+
+</div>
+
+
     </section>
 </main>
 
