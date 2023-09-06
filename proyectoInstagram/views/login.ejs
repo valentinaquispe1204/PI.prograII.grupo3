@@ -4,8 +4,28 @@
 <!-- Aca va el codigo -->
 <main>
     <section class="center main-content">
-    <h1>Login</h1>
-    <p>Crear el formulario para ingresar al sitio.</p>
+    <h1>Bienvenido a la pagina</h1>
+    <p class="frase-login"> Crear el formulario para ingresar al sitio </p>
+    <div class="form-wrapper">
+		<h1 class="formulario1">Inicia sesión</h1>
+		<form class="form" method="post" action="/users/registracion" >
+		  <div class="form-item">
+			<label for="username"></label>
+			<input type="text" name="username" placeholder="Nombre de usuario"  ></input>
+		  </div>
+		  <div class="form-item">
+			<label for="password"></label>
+			<input type="password" name="password" required="required" placeholder="Contraseña"></input>
+		  </div>
+		  <div class="button-panel">
+			<input type="submit" class="button" title="Sign In" value="Iniciar sesión"></input>
+		  </div>
+		  <div>
+			<input type="checkbox" id="rememberme" name="rememberme">
+			<label for="rememberme">Recordame</label>
+		  </div>
+		</form>
+	  </div>
     </section>
 </main>
 
