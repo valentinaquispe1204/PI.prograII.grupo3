@@ -232,17 +232,10 @@ INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, crea
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "19",  "4", DEFAULT, DEFAULT, DEFAULT);
 
 /*4 comentarios para post 20*/
-<<<<<<< HEAD
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
-=======
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "20",  "4", DEFAULT, DEFAULT, DEFAULT);
->>>>>>> 5133062ba59a63b766472dc1a375d5bd44912229
 
 /*4 comentarios para post 21*/
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "21",  "4", DEFAULT, DEFAULT, DEFAULT);
