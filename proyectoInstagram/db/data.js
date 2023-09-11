@@ -7,7 +7,11 @@
         {id: 3,	    arroba: valenflores,    pass: 3333,     fecha: "2002-11-08 07:00:00",   dni : 44486249,	    createdAt :"2023-09-04 17:03:07", 	updatedAt :"2023-09-04 17:03:07"},	
         {id:4,	    arroba: jazquispe,      pass: 131,      fecha: "2001-01-31 16:00:00",   dni : 43640097,	    createdAt :"2023-09-04 17:03:07", 	updatedAt :"2023-09-04 17:03:07"},	
         {id:5,	    arroba:	mdipace,        pass: 8008,     fecha: "2003-07-18 08:03:00",   dni : 45017261,	    createdAt :"2023-09-04 17:03:07", 	updatedAt :"2023-09-04 17:03:07"}],
-    posteos:{},
-    comentarios:{}
+    posteos:[
+        {id
+        comentarios:[]
+        }
+    ],
+    
 };
 module.export = grama; */

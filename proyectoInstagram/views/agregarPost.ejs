@@ -10,12 +10,12 @@
     </div>
         <div class="form-wrapper">
             <h1 class="formulario1">Añadir post</h1>
-            <form class="form" method="post" action="/producst/agregarPost" enctype="multipart/form-data" >
+            <form class="form" method="get" action="/users/miPerfil" enctype="multipart/form-data" >
                 <div class="form-item">
                     
-                    <input type="text" name="title" required="required" placeholder="tematica de la foto"></input>
-                    <input type="text" name="description" placeholder="Descripción"> <br>
-                    <input type="file"	name="cover" placeholder="cover"> 
+                    <input type="text"	name="cover" placeholder="url de la imagen"> 
+                    <input type="text" name="description" placeholder="pie de post"> <br>
+                   
                     
                 </div>
                 <div class="button-panel">
