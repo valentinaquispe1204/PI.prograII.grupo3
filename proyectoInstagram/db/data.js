@@ -9,49 +9,49 @@ const grama = {
     
     posteos: [
 // ------ 4 COMENTARIOS PARA LOS 8 POSTS DEL USUARIO 1 -------- //
-        {idPosteo: 1, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 1, nombreImagen: "", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 1, textoComentario: "", idPosteo: 1, IdUsuario: 1 },
             {idComentario: 2, textoComentario: "", idPosteo: 1, IdUsuario: 1 },
             {idComentario: 3, textoComentario: "", idPosteo: 1, IdUsuario: 1 },
             {idComentario: 4, textoComentario: "", idPosteo: 1, IdUsuario: 1 },
         ]},
-        {idPosteo: 2, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 2, nombreImagen: "", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 5, textoComentario: "", idPosteo: 2, IdUsuario: 1 },
             {idComentario: 6, textoComentario: "", idPosteo: 2, IdUsuario: 1 },
             {idComentario: 7, textoComentario: "", idPosteo: 2, IdUsuario: 1 },
             {idComentario: 8, textoComentario: "", idPosteo: 2, IdUsuario: 1 },
         ]},
-        {idPosteo: 3, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 3, nombreImagen: "", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 9, textoComentario: "", idPosteo: 3, IdUsuario: 1 },
             {idComentario: 10, textoComentario: "", idPosteo: 3, IdUsuario: 1 },
             {idComentario: 11, textoComentario: "", idPosteo: 3, IdUsuario: 1 },
             {idComentario: 12, textoComentario: "", idPosteo: 3, IdUsuario: 1 },
         ]},
-        {idPosteo: 4, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 4, nombreImagen: "", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 13, textoComentario: "", idPosteo: 4, IdUsuario: 1 },
             {idComentario: 14, textoComentario: "", idPosteo: 4, IdUsuario: 1 },
             {idComentario: 15, textoComentario: "", idPosteo: 4, IdUsuario: 1 },
             {idComentario: 16, textoComentario: "", idPosteo: 4, IdUsuario: 1 },
         ]},
-        {idPosteo: 5, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 5, nombreImagen: "", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 17, textoComentario: "", idPosteo: 5, IdUsuario: 1 },
             {idComentario: 18, textoComentario: "", idPosteo: 5, IdUsuario: 1 },
             {idComentario: 19, textoComentario: "", idPosteo: 5, IdUsuario: 1 },
             {idComentario: 20, textoComentario: "", idPosteo: 5, IdUsuario: 1 },
         ]},
-        {idPosteo: 6, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 6, nombreImagen: "", piePost: "",arroba: "micaschachtl", comentarios:[
             {idComentario: 21, textoComentario: "", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 22, textoComentario: "", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 23, textoComentario: "", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 24, textoComentario: "", idPosteo: 6, IdUsuario: 1 },
         ]},
-        {idPosteo: 7, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 7, nombreImagen: "", piePost: "",arroba: "micaschachtl", comentarios:[
             {idComentario: 25, textoComentario: "", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 26, textoComentario: "", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 27, textoComentario: "", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 28, textoComentario: "", idPosteo: 7, IdUsuario: 1 },
         ]},
-        {idPosteo: 8, nombreImagen: "", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 8, nombreImagen: "", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 29, textoComentario: "", idPosteo: 8, IdUsuario: 1 },
             {idComentario: 30, textoComentario: "", idPosteo: 8, IdUsuario: 1 },
             {idComentario: 31, textoComentario: "", idPosteo: 8, IdUsuario: 1 },
