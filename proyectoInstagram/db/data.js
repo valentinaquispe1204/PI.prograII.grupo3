@@ -1,4 +1,5 @@
-/*OBJETO LITERAL*/
+// BASE DE DATOS //
+// objeto literal grama con arrays (usuarios y posteos) con objetos literales dentro //
 const grama = {
     usuarios: [
         {id: 1,     arroba: "micaschachtl",   fotoPerfil: "/images/fotosPerfil/usuario1.jpg",  pass: 2502,     fecha: "2003-02-25 00:00:00",   dni: 44713206 },
@@ -9,7 +10,7 @@ const grama = {
     
     posteos: [
 // --------------------------------------- 4 COMENTARIOS PARA LOS 8 POSTS DEL USUARIO 1: @micaschachtl --------------------------------------------------------------------- //
-        {idPosteo: 1, nombreImagen: "/images/usuario 5.1.jpeg", piePost: "Viviendo el momento.", arroba: "micaschachtl", fotoPerfil: "/images/fotosPerfil/usuario1.jpg", comentarios:[
+        {idPosteo: 1, nombreImagen: "/images/usuario5.1.jpeg", piePost: "Viviendo el momento.", arroba: "micaschachtl", fotoPerfil: "/images/fotosPerfil/usuario1.jpg", comentarios:[
             {idComentario: 1, textoComentario: "¡Qué buena vibra en esta foto!" , idPosteo: 1, IdUsuario: "valitaquispe"},
             {idComentario: 2, textoComentario: "Estás radiante en esta imagen.", idPosteo: 1, IdUsuario: "valenflores" },
             {idComentario: 3, textoComentario: "No puedo evitar sonreír al ver esto.", idPosteo: 1, IdUsuario: "jazquispe" },
@@ -70,7 +71,7 @@ const grama = {
             {idComentario: 39, textoComentario: "Quiero ser como tú cuando crezca.", idPosteo: 10, IdUsuario: "jazquispe" },
             {idComentario: 40, textoComentario: "¿Cuál es tu secreto para la felicidad?", idPosteo: 10, IdUsuario: "mdipace" },
         ]},
-        {idPosteo: 11, nombreImagen: "/images/usuario2.3.jpeg", piePost: "que divertidoo", arroba: "valitaquispe", fotoPerfil: "/images/fotosPerfil/usuario2.jpg", comentarios:[
+        {idPosteo: 11, nombreImagen: "/images/usuario2.3.jpeg", piePost: "Que hermosa que es la vida rodeado de amor", arroba: "valitaquispe", fotoPerfil: "/images/fotosPerfil/usuario2.jpg", comentarios:[
             {idComentario: 41, textoComentario: "Estoy obsesionado con esta imagen.", idPosteo: 11, IdUsuario: "micaschachtl" },
             {idComentario: 42, textoComentario: "Nunca dejes de ser tú mismo.", idPosteo: 11, IdUsuario: "valenflores" },
             {idComentario: 43, textoComentario: "Siempre tienes las mejores ideas.", idPosteo: 11, IdUsuario: "jazquispe" },
@@ -175,7 +176,7 @@ const grama = {
             {idComentario: 107, textoComentario: "¡Me encanta esta imagen!", idPosteo: 27, IdUsuario: "valenflores" },
             {idComentario: 108,textoComentario: "Tus fotos siempre tienen un toque especial.", idPosteo: 27, IdUsuario: "jazquispe" },
         ]},
-        {idPosteo: 28, nombreImagen: "/images/usuario1.5.jpeg", piePost: "Apreciando lasPequeñas cosas.", arroba: "mdipace", fotoPerfil: "/images/fotosPerfil/usuario5.jpg", comentarios:[
+        {idPosteo: 28, nombreImagen: "/images/usuario1.5.jpeg", piePost: "Apreciando las pequeñas cosas.", arroba: "mdipace", fotoPerfil: "/images/fotosPerfil/usuario5.jpg", comentarios:[
             {idComentario: 109 ,textoComentario: "¡Tienes un don para esto!", idPosteo: 28, IdUsuario: "micaschachtl" },
             {idComentario: 110 ,textoComentario: "Eres un verdadero amigo.", idPosteo: 28, IdUsuario: "valitaquispe" },
             {idComentario: 111,textoComentario: "Tu positividad es infecciosa.", idPosteo: 28, IdUsuario: "valenflores" },

@@ -6,7 +6,6 @@
         <main>
             <section class="center main-content">
 
-
                 <% for( let i=0; i < grama.length; i++ ) { %>
                     <article class="post">
                         <div class="info-usuario">
@@ -17,14 +16,13 @@
                             <a href="/products/detallePost/<%= grama[i].idPosteo %>">
                             <img src="<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
                         </div>
-                        <ul class="post-reacciones">
+                        <ul class="post-reacciones"> <!-- el icono de like e icono de comment -->
                             <li>
                                 <i class="fa-regular fa-heart"></i>
                             </li>
                             <li>
                                 <i class="fa-regular fa-comment"></i>
-                            </li>
-                                      
+                            </li>           
                         </ul>
                         <div class="post-comentarios">
                             <a href="<%=grama[i].arroba %>"><%= grama[i].piePost %></a>
@@ -32,20 +30,16 @@
                                 <ul>
                                     <li>
                                         <a href="/users/detalleUsuario/<%= grama[i]. %>"><%=grama[i].arroba %></a>
-                                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
+                                        <span><%= grama[i].piePost %></span>
                                     </li>
 
                                     <a href="/products/detallePost<%= grama[i].comentarios%>">Ver más...</a>
                                 </ul>
                         </div>
                     </article>
-                    <% } %>
-
-
-
+                <% } %>
 
             </section>
-
         </main>
 
         <%- include('./partials/footer.ejs') %>
