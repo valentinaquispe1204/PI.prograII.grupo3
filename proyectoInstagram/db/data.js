@@ -89,13 +89,13 @@ const grama = {
             {idComentario: 52, textoComentario: "", idPosteo: 13, IdUsuario: 2 },
         ]},
 // ------ 4 COMENTARIOS PARA LOS 5 POSTS DEL USUARIO 3 -------- //
-        {idPosteo: 14, nombreImagen: "", piePost: "", idUsuario: 3, comentarios:[
+        {idPosteo: 14, nombreImagen: "", piePost: "", arroba: "valenflores", comentarios:[
             {idComentario: 53, textoComentario: "", idPosteo: 14, IdUsuario: 3 },
             {idComentario: 54, textoComentario: "", idPosteo: 14, IdUsuario: 3 },
             {idComentario: 55, textoComentario: "", idPosteo: 14, IdUsuario: 3 },
             {idComentario: 56, textoComentario: "", idPosteo: 14, IdUsuario: 3 },
         ]},
-        {idPosteo: 15, nombreImagen: "", piePost: "", idUsuario: 3, comentarios:[
+        {idPosteo: 15, nombreImagen: "", piePost: "", arroba: "valenflores", comentarios:[
             {idComentario: 57 ,textoComentario: "", idPosteo: 15, IdUsuario: 3 },
             {idComentario: 58 ,textoComentario: "", idPosteo: 15, IdUsuario: 3 },
             {idComentario: 59 ,textoComentario: "", idPosteo: 15, IdUsuario: 3 },
