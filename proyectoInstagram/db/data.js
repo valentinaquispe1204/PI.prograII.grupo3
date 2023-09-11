@@ -45,7 +45,7 @@ const grama = {
             {idComentario: 23, textoComentario: "Esta foto es como una obra de arte.", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 24, textoComentario: "No puedo evitar envidiar tu talento.", idPosteo: 6, IdUsuario: 1 },
         ]},
-        {idPosteo: 7, nombreImagen: "/images/usuario5.7.jpeg", piePost: "", arroba: "micaschachtl", comentarios:[
+        {idPosteo: 7, nombreImagen: "/images/usuario5.7.jpeg", piePost: "Que linda que es la vida", arroba: "micaschachtl", comentarios:[
             {idComentario: 25, textoComentario: "Eres una fuente de positividad.", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 26, textoComentario: "¡Estoy emocionado por lo que viene!", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 27, textoComentario: "Deberíamos hacer esto juntos algún día.", idPosteo: 7, IdUsuario: 1 },
@@ -70,7 +70,7 @@ const grama = {
             {idComentario: 39, textoComentario: "Quiero ser como tú cuando crezca.", idPosteo: 10, IdUsuario: 2 },
             {idComentario: 40, textoComentario: "¿Cuál es tu secreto para la felicidad?", idPosteo: 10, IdUsuario: 2 },
         ]},
-        {idPosteo: 11, nombreImagen: "/images/usuario2.3.jpeg", piePost: "", idUsuario: 2, comentarios:[
+        {idPosteo: 11, nombreImagen: "/images/usuario2.3.jpeg", piePost: "Que divertidoo", idUsuario: 2, comentarios:[
             {idComentario: 41, textoComentario: "Estoy obsesionado con esta imagen.", idPosteo: 11, IdUsuario: 2 },
             {idComentario: 42, textoComentario: "Nunca dejes de ser tú mismo.", idPosteo: 11, IdUsuario: 2 },
             {idComentario: 43, textoComentario: "Siempre tienes las mejores ideas.", idPosteo: 11, IdUsuario: 2 },
