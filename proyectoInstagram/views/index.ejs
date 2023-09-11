@@ -7,14 +7,15 @@
             <section class="center main-content">
 
 
-                <% for( let i=0; i < grama.posteos.length; i++ ) { %>
+                <% for( let i=0; i < grama.length; i++ ) { %>
                     <article class="post">
                         <div class="info-usuario">
-                            <img src="<%= grama.usuario[i].nombreImagen %>" alt="<%=grama.posteos[i].piePost %>">
-                            <a href="/users/detalleUsuario/<%= grama.posteos[i].arroba %>"></a>
+                            <img src="<%= grama[i].fotoPerfil %>" alt="">
+                            <a href="/users/detalleUsuario/<%= grama[i].arroba %>"><%= grama[i].arroba %></a>
                         </div>
                         <div class="post-body">
-                            <a href="/products/detallePost/<%= grama.posteos[i].idPosteo %>">
+                            <a href="/products/detallePost/<%= grama[i].idPosteo %>">
+                            <img src="<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
                         </div>
                         <ul class="post-reacciones">
                             <li>
@@ -26,23 +27,18 @@
                                       
                         </ul>
                         <div class="post-comentarios">
-                            <a href="<%=grama.posteos[i].arroba %>"></a>
-                            <%= grama.posteos[i].piePost %>
+                            <a href="<%=grama[i].arroba %>"><%= grama[i].piePost %></a>
                                 <h4>Comentarios</h4>
                                 <ul>
                                     <li>
-                                        <a href="/users/detalleUsuario">
-                                            <%=grama.posteos[i].arroba %>
-                                        </a>
+                                        <a href="/users/detalleUsuario/<%= grama[i]. %>"><%=grama[i].arroba %></a>
                                         <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
                                     </li>
 
-                                    <a href="/products/detallePost<%= grama.posteos[i].comentarios%>">Ver más...</a>
+                                    <a href="/products/detallePost<%= grama[i].comentarios%>">Ver más...</a>
                                 </ul>
                         </div>
                     </article>
-
-
                     <% } %>
 
 
