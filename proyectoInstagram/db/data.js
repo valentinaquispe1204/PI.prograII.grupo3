@@ -9,7 +9,7 @@ const grama = {
     
     posteos: [
 // ------ 4 COMENTARIOS PARA LOS 8 POSTS DEL USUARIO 1 -------- //
-        {idPosteo: 1, nombreImagen: "/images/usuario5.1.jpeg", piePost: "Viviendo el momento.", arroba: "micaschachtl",comentarios:[
+        {idPosteo: 1, nombreImagen: "/images/usuario 5.1.jpeg", piePost: "Viviendo el momento.", arroba: "micaschachtl",comentarios:[
             {idComentario: 1, textoComentario: "¡Qué buena vibra en esta foto!" , idPosteo: 1, IdUsuario: 1 },
             {idComentario: 2, textoComentario: "Estás radiante en esta imagen.", idPosteo: 1, IdUsuario: 1 },
             {idComentario: 3, textoComentario: "No puedo evitar sonreír al ver esto.", idPosteo: 1, IdUsuario: 1 },
@@ -185,4 +185,4 @@ const grama = {
 };
 
 
-module.export = grama; 
+module.exports = grama; 

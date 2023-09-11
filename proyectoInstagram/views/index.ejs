@@ -1,174 +1,55 @@
 <%- include('./partials/head.ejs') %>
-<%- include('./partials/header.ejs') %> <!-- a traves de los tags me permite incluir el header y footer -->
+    <%- include('./partials/header.ejs') %>
+        <!-- a traves de los tags me permite incluir el header y footer -->
 
-<!-- Aca va el codigo -->
-<main>
-  <section class="center main-content">
-</div>
-
-
-<% for (let it i = 0 ; i< grama.posteos.length ; i ++){%>
-    <div class= “lista-usuarios”>
-        <a href= “/products/detallePost” <% = usuarios[i].id %> “>
-	    <img src= “<% usuarios[i].nombreImagen &> “ alt = <%=usuarios[i].piePost %> “>
-                            <article class="post">
-                                <h2 class='h2'><%=posteo[i].arroba %></h2>
-                                <p><%=<usuarios i="" class="piePost"></usuarios> %></p>
-                                <p>Comentarios: <%= arroba[i].comentarios.length %></p>
-                            </article>
-                        </a>
-                    </section>
-                </div>
-            <% } %>
-        </div>
-
-      <article class="post">
-          <div class="info-usuario ">
-              <img src="https://via.placeholder.com/40" alt="">
-              <h4>
-                  <a href="/users/detalleUsuario">Usuario</a>
-              </h4>
-          </div>
-          <div class="post-body">
-              <a href="/products/detallePost">
-                  <img src="https://via.placeholder.com/500x600" alt="">
-              </a>
-          </div>
-          <ul class="post-reacciones">
-              <li>
-                  <i class="fa-regular fa-heart"></i>
-              </li>
-              <li>
-                  <i class="fa-regular fa-comment"></i>
-              </li>
-          </ul>
-          <div class="post-comentarios">
-              <h4>Comentarios</h4>
-              <ul>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <a href="/products/detallePost">Ver más...</a>
-              </ul>
-          </div>
-      </article>
+        <!-- Aca va el codigo -->
+        <main>
+            <section class="center main-content">
 
 
-    <!--   lo comento y si anda lo borro
+                <% for( let i=0; i < grama.posteos.length; i++ ) { %>
+                    <article class="post">
+                        <div class="info-usuario">
+                            <img src="<%= grama.usuario[i].nombreImagen %>" alt="<%=grama.posteos[i].piePost %>">
+                            <a href="/users/detalleUsuario/<%= grama.posteos[i].arroba %>"></a>
+                        </div>
+                        <div class="post-body">
+                            <a href="/products/detallePost/<%= grama.posteos[i].idPosteo %>">
+                        </div>
+                        <ul class="post-reacciones">
+                            <li>
+                                <i class="fa-regular fa-heart"></i>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-comment"></i>
+                            </li>
+                                      
+                        </ul>
+                        <div class="post-comentarios">
+                            <a href="<%=grama.posteos[i].arroba %>"></a>
+                            <%= grama.posteos[i].piePost %>
+                                <h4>Comentarios</h4>
+                                <ul>
+                                    <li>
+                                        <a href="/users/detalleUsuario">
+                                            <%=grama.posteos[i].arroba %>
+                                        </a>
+                                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
+                                    </li>
+
+                                    <a href="/products/detallePost<%= grama.posteos[i].comentarios%>">Ver más...</a>
+                                </ul>
+                        </div>
+                    </article>
 
 
-      <article class="post">
-          <div class="info-usuario ">
-              <img src="https://via.placeholder.com/40" alt="">
-              <h4>
-                  <a href="/users/detalleUsuario">Usuario</a>
-              </h4>
-          </div>
-          <div class="post-body">
-              <a href="/products/detallePost">
-                  <img src="https://via.placeholder.com/500x600" alt="">
-              </a>
-          </div>
-          <ul class="post-reacciones">
-              <li>
-                  <i class="fa-regular fa-heart"></i>
-              </li>
-              <li>
-                  <i class="fa-regular fa-comment"></i>
-              </li>
-          </ul>
-          <div class="post-comentarios">
-              <h4>Comentarios</h4>
-              <ul>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <a href="/products/detallePost">Ver más...</a>
-              </ul>
-          </div>
-      </article>
-      <article class="post">
-          <div class="info-usuario ">
-              <img src="https://via.placeholder.com/40" alt="">
-              <h4>
-                  <a href="/users/detalleUsuario">Usuario</a>
-              </h4>
-          </div>
-          <div class="post-body">
-              <a href="/products/detallePost">
-                  <img src="https://via.placeholder.com/500x600" alt="">
-              </a>
-          </div>
-          <ul class="post-reacciones">
-              <li>
-                  <i class="fa-regular fa-heart"></i>
-              </li>
-              <li>
-                  <i class="fa-regular fa-comment"></i>
-              </li>
-          </ul>
-          <div class="post-comentarios">
-              <h4>Comentarios</h4>
-              <ul>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <a href="/products/detallePost">Ver más...</a>
-              </ul>
-          </div>
-      </article>
-      <article class="post">
-          <div class="info-usuario ">
-              <img src="https://via.placeholder.com/40" alt="">
-              <h4>
-                  <a href="/users/detalleUsuario">Usuario</a>
-              </h4>
-          </div>
-          <div class="post-body">
-              <a href="/products/detallePost">
-                  <img src="https://via.placeholder.com/500x600" alt="">
-              </a>
-          </div>
-          <ul class="post-reacciones">
-              <li>
-                  <i class="fa-regular fa-heart"></i>
-              </li>
-              <li>
-                  <i class="fa-regular fa-comment"></i>
-              </li>
-          </ul>
-          <div class="post-comentarios">
-              <h4>Comentarios</h4>
-              <ul>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <li>
-                      <a href="/users/detalleUsuario">Usuario</a>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                  </li>
-                  <a href="/products/detallePost">Ver más...</a>
-              </ul>
-          </div>
-      </article> -->
-  </section>    
+                    <% } %>
 
-</main>
 
-<%- include('./partials/footer.ejs') %> 
+
+
+            </section>
+
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
