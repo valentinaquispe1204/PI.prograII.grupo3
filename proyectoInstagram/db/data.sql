@@ -155,7 +155,7 @@ INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, crea
 =======
 >>>>>>> 5133062ba59a63b766472dc1a375d5bd44912229
 /*4 comentarios para post 7*/
-INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
+INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT,  "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "",  "7",  "1", DEFAULT, DEFAULT, DEFAULT);
