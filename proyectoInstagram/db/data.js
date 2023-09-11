@@ -9,49 +9,49 @@ const grama = {
     
     posteos: [
 // ------ 4 COMENTARIOS PARA LOS 8 POSTS DEL USUARIO 1 -------- //
-        {idPosteo: 1, nombreImagen: "/images/usuario5.1.jpeg", piePost: "Viviendo el momento.", idUsuario: 1, comentarios:[
+        {idPosteo: 1, nombreImagen: "/images/usuario5.1.jpeg", piePost: "Viviendo el momento.", arroba: "micaschachtl",comentarios:[
             {idComentario: 1, textoComentario: "¡Qué buena vibra en esta foto!" , idPosteo: 1, IdUsuario: 1 },
             {idComentario: 2, textoComentario: "Estás radiante en esta imagen.", idPosteo: 1, IdUsuario: 1 },
             {idComentario: 3, textoComentario: "No puedo evitar sonreír al ver esto.", idPosteo: 1, IdUsuario: 1 },
             {idComentario: 4, textoComentario: "Me encanta tu estilo, siempre impecable.", idPosteo: 1, IdUsuario: 1 },
         ]},
-        {idPosteo: 2, nombreImagen: "/images/usuario5.2.jpeg", piePost: "Reflejando sobre la vida.", idUsuario: 1, comentarios:[
+        {idPosteo: 2, nombreImagen: "/images/usuario5.2.jpeg", piePost: "Reflejando sobre la vida.",arroba: "micaschachtl",comentarios:[
             {idComentario: 5, textoComentario: "Eres una fuente inagotable de inspiración.", idPosteo: 2, IdUsuario: 1 },
             {idComentario: 6, textoComentario: "¿Dónde fue tomada esta foto? ", idPosteo: 2, IdUsuario: 1 },
             {idComentario: 7, textoComentario: "Tu sonrisa ilumina mi día.", idPosteo: 2, IdUsuario: 1 },
             {idComentario: 8, textoComentario: "Los recuerdos como este son invaluables.", idPosteo: 2, IdUsuario: 1 },
         ]},
-        {idPosteo: 3, nombreImagen: "/images/usuario5.3.jpeg", piePost: "Sintiendo la brisa en mi piel.", idUsuario: 1, comentarios:[
+        {idPosteo: 3, nombreImagen: "/images/usuario5.3.jpeg", piePost: "Sintiendo la brisa en mi piel.", arroba: "micaschachtl", comentarios:[
             {idComentario: 9, textoComentario: "Esta foto me trae nostalgia.", idPosteo: 3, IdUsuario: 1 },
             {idComentario: 10, textoComentario: "Nunca dejas de sorprenderme.", idPosteo: 3, IdUsuario: 1 },
             {idComentario: 11, textoComentario: "Estás en tu elemento natural.", idPosteo: 3, IdUsuario: 1 },
             {idComentario: 12, textoComentario: "¿Qué historia hay detrás de esta foto?", idPosteo: 3, IdUsuario: 1 },
         ]},
-        {idPosteo: 4, nombreImagen: "/images/usuario5.4.jpeg", piePost: "Agradeciendo cada día.", idUsuario: 1, comentarios:[
+        {idPosteo: 4, nombreImagen: "/images/usuario5.4.jpeg", piePost: "Agradeciendo cada día.", arroba: "micaschachtl", comentarios:[
             {idComentario: 13, textoComentario: "Eres una persona increíble.", idPosteo: 4, IdUsuario: 1 },
             {idComentario: 14, textoComentario: "Tengo suerte de tenerte como amigo.", idPosteo: 4, IdUsuario: 1 },
             {idComentario: 15, textoComentario: "¿Cuál es tu secreto?", idPosteo: 4, IdUsuario: 1 },
             {idComentario: 16, textoComentario: "La belleza está en los detalles.", idPosteo: 4, IdUsuario: 1 },
         ]},
-        {idPosteo: 5, nombreImagen: "/images/usuario5.5.jpeg", piePost: "En busca de nuevas aventuras.", idUsuario: 1, comentarios:[
+        {idPosteo: 5, nombreImagen: "/images/usuario5.5.jpeg", piePost: "En busca de nuevas aventuras.",arroba: "micaschachtl", comentarios:[
             {idComentario: 17, textoComentario: "¡Eres un aventurero intrépido!", idPosteo: 5, IdUsuario: 1 },
             {idComentario: 18, textoComentario: "Siempre haces que las cosas se vean fáciles.", idPosteo: 5, IdUsuario: 1 },
             {idComentario: 19, textoComentario: "¿Qué tal ha sido tu día?", idPosteo: 5, IdUsuario: 1 },
             {idComentario: 20, textoComentario: "¡Me encanta esta imagen!", idPosteo: 5, IdUsuario: 1 },
         ]},
-        {idPosteo: 6, nombreImagen: "/images/usuario5.6.jpeg", piePost: "Explorando lo desconocido.", idUsuario: 1, comentarios:[
+        {idPosteo: 6, nombreImagen: "/images/usuario5.6.jpeg", piePost: "Explorando lo desconocido.",arroba: "micaschachtl", comentarios:[
             {idComentario: 21, textoComentario: "Tus fotos siempre tienen un toque especial.", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 22, textoComentario: "¡Hagamos planes pronto!", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 23, textoComentario: "Esta foto es como una obra de arte.", idPosteo: 6, IdUsuario: 1 },
             {idComentario: 24, textoComentario: "No puedo evitar envidiar tu talento.", idPosteo: 6, IdUsuario: 1 },
         ]},
-        {idPosteo: 7, nombreImagen: "/images/usuario5.7.jpeg", piePost: "", idUsuario: 1, comentarios:[
+        {idPosteo: 7, nombreImagen: "/images/usuario5.7.jpeg", piePost: "", arroba: "micaschachtl", comentarios:[
             {idComentario: 25, textoComentario: "Eres una fuente de positividad.", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 26, textoComentario: "¡Estoy emocionado por lo que viene!", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 27, textoComentario: "Deberíamos hacer esto juntos algún día.", idPosteo: 7, IdUsuario: 1 },
             {idComentario: 28, textoComentario: "¿Cómo lograste capturar este momento?", idPosteo: 7, IdUsuario: 1 },
         ]},
-        {idPosteo: 8, nombreImagen: "/images/usuario5.8.jpeg", piePost: "Perdido en mis pensamientos.", idUsuario: 1, comentarios:[
+        {idPosteo: 8, nombreImagen: "/images/usuario5.8.jpeg", piePost: "Perdido en mis pensamientos.", arroba: "micaschachtl", comentarios:[
             {idComentario: 29, textoComentario: "Eres una persona auténtica.", idPosteo: 8, IdUsuario: 1 },
             {idComentario: 30, textoComentario: "Gracias por compartir esto con nosotros.", idPosteo: 8, IdUsuario: 1 },
             {idComentario: 31, textoComentario: "¿Dónde puedo conseguir ese atuendo?", idPosteo: 8, IdUsuario: 1 },
