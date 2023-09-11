@@ -10,4 +10,6 @@ router.get('/login', userControllers.login);
 router.get('/miPerfil', userControllers.miPerfil);
 router.get('/registracion', userControllers.registracion);
 
+//*mas adelante vamos a usar el metodo post*//
+
 module.exports = router;

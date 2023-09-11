@@ -3,12 +3,16 @@
         <div class="navbar-left">
             <a href="/"><img class="imagenLogo" src="/images/logoGrama.jpg" alt=""></a>
         </div>
-        <div class="navbar-center">
-            <form action="" class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" class="search-input" placeholder="Buscar...">
+
+        <div class = "search">
+            <form action="/resultadoBusqueda" method="GET" class="search-form">
+                    <input type="text" name="search" placeholder=" Buscá un perfil"
+                        class="search-form_input">
+                    <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
             </form>
+        
         </div>
+
         <div class="navbar-right">
             <ul class="menu">
                 <li><a href="/users/registracion">Registro</a></li>
@@ -19,6 +23,7 @@
                 <!-- log out? -->
                 <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
             </ul>
-        </div>
+        </div> 
+
     </nav>
 </header>

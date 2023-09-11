@@ -1,3 +1,5 @@
+var db = require("../db/data")
+
 const controlador ={
     index :  function(req, res, next) {
         res.render('index', { title: 'Express' });

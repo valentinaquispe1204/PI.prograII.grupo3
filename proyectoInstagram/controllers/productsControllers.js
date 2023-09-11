@@ -1,3 +1,4 @@
+var db = require("../db/data")
 const productsControllers = {
     agregarPost : function(req, res, next) {
         res.render('agregarPost', { title: 'Express' });

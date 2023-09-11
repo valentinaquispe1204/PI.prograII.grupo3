@@ -5,7 +5,24 @@
 <main>
     <section class="center main-content">
     <h1>Registrate!</h1>
-    <p>Crear el formulario para registrar un nuevo usuario.</p>
+    <p>Crear el formulario para registrar un nuevo usuario</p>
+    </section>
+    <form class="form" method="get" action="/users/login" > 
+        <div class="form-item">
+            <!-- <input type="email" name="email" placeholder="Correo electronico"> <br> -->
+                <input type="text" name="username" placeholder="Nombre de usuario"> <br>
+                <input type="password" name="password" placeholder="Contraseña"> <br>
+                <input type="file" name="img" placeholder="Foto de Perfil"> <br>
+                <input type="date" name="date" placeholder="Fecha de nacimiento"> <br>
+                <input type="text" name="dni" placeholder="documento"> <br>
+                
+                    
+        </div>
+        <div class="button-panel">
+        <input type="submit" class="button" title="Sign Up" value="Registrate"></input>
+      </div>
+
+    </form>
     </section>
 </main>
 
