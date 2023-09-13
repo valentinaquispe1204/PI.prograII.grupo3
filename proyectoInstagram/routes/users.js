@@ -4,7 +4,7 @@ var router = express.Router();
 const userControllers = require("../controllers/usersControllers")
 
 /* GET users listing. */
-router.get('/detalleUsuario', userControllers.detalleUsuario);
+router.get('/detalleUsuario/:id', userControllers.detalleUsuario);  /*/.id para encontrar lo que le mandamos */
 router.get('/editarPerfil', userControllers.editarPerfil);
 router.get('/login', userControllers.login);
 router.get('/miPerfil', userControllers.miPerfil);

@@ -1,34 +1,37 @@
 <%- include('./partials/head.ejs') %>
-<%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
-<!-- Aca va el codigo -->
-<main>
-    <% for( let i = 0; i < 1; i++ ) { %> <!-- para que muestre solo un usuario -->
-        <div class="user-detail container">
-            <section class="top main-content">
-                <img class="profile" src="<%= grama.posteos[i].fotoPerfil %>" alt="">
-                <div class="info-usuario">
-                    <p><%= grama.posteos[i].arroba %></p> 
-                    <a class="follow" href="">seguir</a>
-                    <ul class="meta">
-                        <li>100 post</li>
-                        <li>200 seguidores</li>
-                        <li>300 seguidos</li>
-                    </ul>
+        <!-- Aca va el codigo -->
+        <main>
+        
+                <div class="user-detail container">
+                    <section class="top main-content">
+                      
+                        <img class="profile" src="<%=posteosPerfil[0].fotoPerfil %>" alt="">
+                        <div class="info-usuario">
+                            <p>
+                                <%= posteosPerfil[0].arroba %>
+                            </p>
+                            <a class="follow" href="">seguir</a>
+                            <ul class="meta">
+                                <li>100 post</li>
+                                <li>200 seguidores</li>
+                                <li>300 seguidos</li>
+                            </ul>
+                        </div>
+                    </section>
+                  
+                        <% for( let i=0; i < posteosPerfil.length; i++ ) { %>
+                            <section class="bottom">
+                                <article class="post">
+                                    <a href="/products/detallePost/<%= posteosPerfil[i].idPosteo %>">
+                                        <img src="<%= posteosPerfil[i].nombreImagen %>"
+                                            alt="<%=posteosPerfil[i].piePost %>">
+                                    </a>
+                                </article>
+                            </section>
+                            <% } %>
                 </div>
-            </section>
+        </main>
 
-            <section class="bottom">
-                <article class="post">
-                    <a href="/products/detallePost">
-                        <img src="https://via.placeholder.com/200x250" alt="">
-                    </a>
-                </article>
-                
-            </section>
-        </div>
-    <% } %>
-    
-</main>
-
-<%- include('./partials/footer.ejs') %> 
+        <%- include('./partials/footer.ejs') %>
