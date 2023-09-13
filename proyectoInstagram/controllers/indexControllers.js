@@ -7,7 +7,7 @@ const controlador ={
 
       }, 
     resultadoBusqueda :  function(req, res, next) {
-        res.render('resultadoBusqueda', { title: 'Express' });
+        res.render('resultadoBusqueda', { grama: db });
       },   
 }
 

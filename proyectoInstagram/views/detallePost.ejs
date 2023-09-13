@@ -3,68 +3,39 @@
 
 <!-- Aca va el codigo -->
 <main>
-    <div class="post-detail container">
-        <section class="center main-content post">
-            <div class="info-usuario">
-                <img src="https://via.placeholder.com/40" alt="">
-                <p><a href="/users/detalleUsuario">Nombre de usuario</a></p>
-            </div>
-            <img class="photo" src="https://via.placeholder.com/500x600" alt="">
-        </section>
-        <section class="right">
-            <h4>Comentarios</h4>
-            <section class="comments">
-                <form action="" class="comment-form">
-                    <input type="text" class="input" placeholder="Agregar comentario">
-                    <button type="submit">Comentar</button>
-                </form>
-                <div>
-                    <article class="comment">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <section class="content">
-                            <a class="user" href="/users/detalleUsuario">Nombre</a>
-                            <span class="text">que lindo todo</span>
-                        </section>
-                    </article>
-                    <article class="comment">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <section class="content">
-                            <a class="user" href="/users/detalleUsuario">Nombre</a>
-                            <span class="text">tremendo </span>
-                        </section>
-                    </article>
-                    <article class="comment">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <section class="content">
-                            <a class="user" href="/users/detalleUsuario">Nombre</a>
-                            <span class="text">woww impresionante</span>
-                        </section>
-                    </article>
-                    <article class="comment">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <section class="content">
-                            <a class="user" href="/users/detalleUsuario">Nombre</a>
-                            <span class="text">que ricooo</span>
-                        </section>
-                    </article>
-                    <article class="comment">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <section class="content">
-                            <a class="user" href="/users/detalleUsuario">Nombre</a>
-                            <span class="text">hermoso</span>
-                        </section>
-                    </article>
-                    <article class="comment">
-                        <img src="https://via.placeholder.com/40" alt="">
-                        <section class="content">
-                            <a class="user" href="/users/detalleUsuario">Nombre</a>
-                            <span class="text">que divertidoo</span>
-                        </section>
-                    </article>
+    <!-- aca no va un for pq ya iteramos en los controladores!!!!! -->
+        <div class="post-detail container">
+            <section class="center main-content post">
+                <div class="info-usuario">
+                    <img src="<%= grama.fotoPerfil %>" alt="">
+                    <p><a href="/users/detalleUsuario/<%= grama.arroba %>"><%= grama.arroba %></a></p>
                 </div>
+                <img class="photo" src="<%= grama.nombreImagen %>" alt="">
             </section>
-        </section>
-    </div>
+            <section class="right">
+                <h4>Comentarios</h4>
+                <section class="comments">
+                    <form action="get" class="comment-form">
+                        <input type="text" class="input" placeholder="Agregar comentario">
+                        <button type="submit">Comentar!</button>
+                    </form>
+                    <div>
+                      <!-- aca si un for que itere en los comentarios -->
+                    <% for( let i = 0; i < grama.comentarios.length; i++ ) { %>
+                    <article class="comment">
+                            <img src="<%= grama.comentarios[i].fotoPerfil %>" alt=""> 
+                            <section class="content">
+                                <a class="user" href="/users/detalleUsuario/<%= grama.comentarios[i].idUsuario %>"><%= grama.comentarios[i].idUsuario %></a>
+                                <span class="text"><%=grama.comentarios[i].textoComentario %></span>
+                            </section>
+                        </article>
+                    <% } %>
+                      
+                    </div>
+                </section>
+            </section>
+        </div>
+    
 </main>
 
 <%- include('./partials/footer.ejs') %> 
