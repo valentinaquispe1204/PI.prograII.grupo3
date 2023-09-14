@@ -5,7 +5,7 @@ const indexControllers = require("../controllers/indexControllers")
 
 /* GET home page. */
 router.get('/', indexControllers.index);
-router.get('/resultadoBusqueda', indexControllers.resultadoBusqueda);
+router.get('/resultadoBusqueda/:search', indexControllers.resultadoBusqueda);
 
 /*HAY QUE AGREGAR : Y LA ID?????????????? */
 module.exports = router;

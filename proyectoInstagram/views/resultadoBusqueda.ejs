@@ -6,6 +6,22 @@
     <section class="center main-content">
     <h1>Resultados de búsqueda.</h1>
     <p>Construir la vista.</p>
+
+    <div class="">
+        <% for( let i = 0; i < grama.posteos.length; i++ ) { %>
+        <% if (busqueda[0] == grama.posteos[i]) { %>
+            <section class="center main-content post">
+                <div class="info-usuario">
+                    <img src="<%= grama.posteos[i].fotoPerfil %>" alt="">
+                    <p><a href="/users/detalleUsuario/<%= grama.posteos[i].arroba %>"><%= grama.posteos[i].arroba %></a></p>
+                </div>
+                <img class="photo" src="<%= grama.nombreImagen %>" alt="">
+            </section>
+        <% } %>
+        <% } %>
+
+    </div>
+   
     </section>
 </main>
 
