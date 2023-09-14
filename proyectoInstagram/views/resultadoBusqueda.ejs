@@ -5,22 +5,44 @@
 <main>
     <section class="center main-content">
     <h1>Resultados de búsqueda.</h1>
-    <p>Construir la vista.</p>
+    <!-- <p>Construir la vista.</p> -->
 
-    <div class="">
-        <% for( let i = 0; i < grama.posteos.length; i++ ) { %>
-        <% if (busqueda[0] == grama.posteos[i]) { %>
-            <section class="center main-content post">
+    <section class="center main-content">
+
+        <% for( let i=0; i < grama.length; i++ ) { %>
+            <article class="post">
                 <div class="info-usuario">
-                    <img src="<%= grama.posteos[i].fotoPerfil %>" alt="">
-                    <p><a href="/users/detalleUsuario/<%= grama.posteos[i].arroba %>"><%= grama.posteos[i].arroba %></a></p>
+                    <img src="<%= grama[i].fotoPerfil %>" alt="">
+                    <a href="/users/detalleUsuario/<%= grama[i].arroba %>"><%= grama[i].arroba %></a>
                 </div>
-                <img class="photo" src="<%= grama.nombreImagen %>" alt="">
-            </section>
-        <% } %>
+                <div class="post-body">
+                    <a href="/products/detallePost/<%= grama[i].idPosteo %>">
+                    <img src="<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
+                </div>
+                <ul class="post-reacciones"> <!-- el icono de like e icono de comment -->
+                    <li>
+                        <i class="fa-regular fa-heart"></i>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-comment"></i>
+                    </li>           
+                </ul>
+                <div class="post-comentarios">
+                    <a href="<%=grama[i].arroba %>"><%= grama[i].piePost %></a>
+                        <h4>Comentarios</h4>
+                        <ul>
+                            <li>
+                                <a href="/users/detalleUsuario/<%= grama[i].comentarios.idUsuario %>"><%=grama[i].arroba %></a>
+                                <span><%= grama[i].piePost %></span>
+                            </li>
+
+                            <a href="/products/detallePost/<%= grama[i]%>">Ver más...</a>
+                        </ul>
+                </div>
+            </article>
         <% } %>
 
-    </div>
+    </section>
    
     </section>
 </main>
