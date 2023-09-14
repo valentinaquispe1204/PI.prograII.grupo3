@@ -17,18 +17,19 @@
                     </ul>
                 </div>
             </section>
-
-            <section class="bottom">
-                <article class="post">
-                    <a href="/products/detallePost">
-                        <img src="https://via.placeholder.com/200x250" alt="">
-                    </a>
-                </article>
-                
-            </section>
-        </div>
     <% } %>
-    
+    <% for( let i = 0; i < grama.posteos.length; i++ ) { %>
+            <section class="bottom">
+                        <article class="post">
+                            <a href="/products/detallePost">
+                                <img src="https://via.placeholder.com/200x250" alt="">
+                            </a>
+                        </article>
+                        
+                    </section>
+                </div>
+    <% } %>
+            
 </main>
 
 <%- include('./partials/footer.ejs') %> 
