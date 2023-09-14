@@ -18,7 +18,7 @@ const productsControllers = {
         }
       //   res.send({posteo, id, data: posteos})
       // res.render('detallePost', { grama: db });
-      return res.send("no hay datos de este detalle") /* por si se ingresa un numero en la ruta que no esta en el objeto */
+     /* por si se ingresa un numero en la ruta que no esta en el objeto */
     }
 }
 
