@@ -8,7 +8,11 @@
             <section class="center main-content post">
                 <div class="info-usuario">
                     <img src="<%= grama.fotoPerfil %>" alt="">
-                    <p><a href="/users/detalleUsuario/<%= grama.arroba %>"><%= grama.arroba %></a></p>
+                    <p>
+                        <a href="/users/detalleUsuario/<%= grama.arroba %>">
+                            <%= grama.arroba %> 
+                        </a>
+                    </p>
                 </div>
                 <img class="photo" src="<%= grama.nombreImagen %>" alt="">
             </section>
@@ -25,7 +29,7 @@
                     <article class="comment">
                             <img src="<%= grama.comentarios[i].fotoPerfil %>" alt=""> 
                             <section class="content">
-                                <a class="user" href="/users/detalleUsuario/<%= grama.comentarios[i].idUsuario %>"><%= grama.comentarios[i].idUsuario %></a>
+                                <a class="user" href="/users/detalleUsuario/<%= grama.comentarios[i].IdUsuario %>"><%= grama.comentarios[i].IdUsuario %></a>
                                 <span class="text"><%=grama.comentarios[i].textoComentario %></span>
                             </section>
                         </article>
