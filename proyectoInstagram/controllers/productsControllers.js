@@ -16,7 +16,7 @@ const productsControllers = {
             return res.render('detallePost', {grama: posteos[i]}) /* envia el dato */
           }
         }
-      //   res.send({posteo, id, data: posteos})
+        // res.send({posteo, id, data: posteos})
       // res.render('detallePost', { grama: db });
      /* por si se ingresa un numero en la ruta que no esta en el objeto */
     }
