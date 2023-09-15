@@ -18,7 +18,7 @@ const controlador = {
     // };
     // // return res.send("no hay datos de este detalle")
     // res.send({busqueda})
-      res.render('resultadoBusqueda', { grama: db })
+      res.render('resultadoBusqueda', { grama: db.posteos })
   },
 }
 
