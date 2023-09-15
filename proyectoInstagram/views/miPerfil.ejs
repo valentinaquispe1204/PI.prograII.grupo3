@@ -5,59 +5,30 @@
 <main>
     <div class="user-detail container">
         <section class="top main-content">
-            <img class="profile" src="https://via.placeholder.com/100x100" alt="">
+            <img class="profile" src="<%=grama.posteos[0].fotoPerfil%>" alt="">
             <div class="info-usuario">
-                <p>Nombre de usuario</p> 
+                <p><%= grama.posteos[0].arroba %></p> 
                 <a class="follow" href="/users/editarPerfil"><i class="fa-solid fa-user-gear"></i></a>
                 <ul class="meta">
-                    <li>100 post</li>
+                    <li>100 posts</li>
                     <li>200 seguidores</li>
                     <li>300 seguidos</li>
                 </ul>
             </div>
         </section>
-        <section class="bottom">
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-            <article class="post">
-                <a href="/products/detallePost">
-                    <img src="https://via.placeholder.com/200x250" alt="">
-                </a>
-            </article>
-        </section>
+        <% for( let i = 0; i < 8; i++ ) { %>
+            <section class="bottom">
+                <article class="post">
+                    <% if (grama.posteos[i].arroba == grama.posteos[0].arroba) { %>
+                        <a href="/products/detallePost/<%= grama.posteos[i].idPosteo %>">
+                            <img src="<%=grama.posteos[i].nombreImagen  %>" alt="">
+                        </a>
+                    <% } %>
+
+                </article>
+            </section>
+        <% } %>
+     
     </div>
 </main>
 
