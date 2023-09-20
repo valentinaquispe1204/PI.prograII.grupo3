@@ -1,6 +1,6 @@
 const grama = require("../db/data");
 var db = require("../db/data")
-const userControllers = {
+const userControllers = { 
     detalleUsuario : function(req, res, next) {
       let idPerfil = req.params.id;
       let posteosPerfil = [];
