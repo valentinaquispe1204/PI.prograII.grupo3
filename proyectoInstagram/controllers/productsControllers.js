@@ -1,4 +1,4 @@
-require("../database/models"); 
+const grama = require("../database/models"); 
 const productsControllers = { 
     agregarPost : function(req, res, next) {
         
