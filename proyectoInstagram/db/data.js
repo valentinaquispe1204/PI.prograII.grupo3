@@ -1,11 +1,3 @@
-// BASE DE DATOS //
-// objeto literal grama con arrays (usuarios y posteos) con objetos literales dentro //
-//2 propiedades principales usuarios y posteos, adentro tienen un array, dentro un objeto literal por cada usuario
-//posteo tengo una lista con cada post , con cada post un objeto literal , 4 objetos literal dentro de la propiedad comentarios que marcan los 4 comentarios que van adentro 
-//28 objetos literal = 28 post en el trabajo con 4 objetos literal que son los comentarios en el post , estos 4 objetos literales estan adentro de una lista llamada comentarios.
-//propiedad id con valor 1 (todas son propiedad y valor)
-//usamos grama.posteos no usamos grama.usuarios
-
 const grama = {
     usuarios: [
         {id: 1,     arroba: "micaschachtl",   fotoPerfil: "/images/fotosPerfil/usuario1.jpg",  pass: 2502,     fecha: "2003-02-25 00:00:00",   dni: 44713206 },

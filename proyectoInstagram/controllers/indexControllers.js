@@ -1,7 +1,4 @@
-
-
-const grama = require("../db/data"); 
-var db = require("../db/data")
+const grama = require("../database/models"); 
 const controlador = { 
   index: function (req, res, next) { 
     res.render('index', { grama: db.posteos });

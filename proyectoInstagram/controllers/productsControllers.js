@@ -1,4 +1,4 @@
-var db = require("../db/data")
+require("../database/models"); 
 const productsControllers = { 
     agregarPost : function(req, res, next) {
         
