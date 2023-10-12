@@ -1,9 +1,8 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/header.ejs') %>
 
-<!-- Aca va el codigo -->
+
 <main>
-    <!-- aca no va un for pq ya iteramos en los controladores!!!!! -->
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
@@ -24,7 +23,7 @@
                         <button type="submit">Comentar!</button>
                     </form>
                     <div>
-                      <!-- aca si un for que itere en los comentarios -->
+                      
                     <% for( let i = 0; i < grama.comentarios.length; i++ ) { %>
                     <article class="comment">
                             <img src="<%= grama.comentarios[i].fotoPerfil %>" alt=""> 

@@ -9,7 +9,7 @@ const userControllers = {
           posteosPerfil.push(grama.posteos[i])
         }        
       }
-      // res.send(posteosPerfil)
+      
       res.render('detalleUsuario', { grama :db, posteosPerfil:posteosPerfil });
       },
 
