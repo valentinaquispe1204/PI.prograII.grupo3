@@ -34,8 +34,19 @@ module.exports = function(sequelize, dataTypes) {
     const Comentarios =  sequelize.define(alias,cols,config);
     }
     
-    /*hacer relaciones con los otros 2 */
-
+      /*RELACIONES */
+      Comentarios.associate = function(models){
+        /*contraparte de la relacion posteo con los comentarios */
+        Comentarios.belongsTo(models.Posteos, {
+            as: "posteosC",
+            foreignKey: "idComentario",
+        })
+        /*relacionamos usuarios con comentarios */
+        Comentarios.belongsTo(models.Users, {
+            as: "usersC",
+            foreignKey: "idComentario",
+        })
+    }
     return  Comentarios;
     
     

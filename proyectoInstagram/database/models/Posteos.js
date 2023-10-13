@@ -38,7 +38,21 @@ module.exports = function(sequelize, dataTypes) {
     
     const Posteos =  sequelize.define(alias,cols,config);
     }
-    
+    /*RELACIONES */
+    Posteos.associate = function(models){
+        /*relacionamos posteo con el usuario */
+        Posteos.belongsTo(models.Users,{
+            as: "usersP",
+            foreignKey: "idPosteo"
+        })
+        /*relacionamos posteo con los comentarios */
+        Posteos.hasMany(models.Comentarios, {
+            as: "comentariosP",
+            foreignKey: "idPosteo",
+        })
+    }
+
+
     return  Posteos;
     
-    /*FK usuarios*/ 
+    

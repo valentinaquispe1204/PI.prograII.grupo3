@@ -52,5 +52,18 @@ let config = {
 
 const Users =  sequelize.define(alias,cols,config);
 }
+/*RELACIONES */
+Users.associate = function(models){
+/*contra parte de la relación con los posteos */
+    Users.hasMany(models.Posteos,{
+        as: "posteosU",
+        foreignKey: "idUsuario"
+    })
+/*contraparte de la relacion con los comentarios */
+    Users.hasMany(models.Comentarios,{
+        as: "comentariosU",
+        foreignKey: "idUsuario"
+    })
+}
 
 return  Users;
