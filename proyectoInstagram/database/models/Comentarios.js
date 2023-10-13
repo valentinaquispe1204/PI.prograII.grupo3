@@ -1,0 +1,41 @@
+module.exports = function(sequelize, dataTypes) {
+    let alias = "Comentarios";  
+    
+    let cols = {  
+        id: { /**preguntar si falta agregar idComentario o dejar asi */
+            autoIncrement: true,
+            primaryKey: true,
+            type: dataTypes.INTEGER
+        
+        },
+        textoComentario: {
+            type: dataTypes.STRING(400)
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        },
+    
+        deletedAt: {
+            type: dataTypes.DATE
+        },
+    
+    }
+    
+    let config = {  
+        tableName : "comentarios",
+        timestamps: true,
+        underscored: false,
+    }
+    
+    
+    const Comentarios =  sequelize.define(alias,cols,config);
+    }
+    
+    /*hacer relaciones con los otros 2 */
+
+    return  Comentarios;
+    
+    
