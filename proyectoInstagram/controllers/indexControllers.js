@@ -1,25 +1,55 @@
-const grama = require("../db/data");
-var db = require("../db/data")
+// requerimos los modelos ya creados
+const grama = require("../database/models");
+const posteos = grama.Posteos
+const op = grama.Sequelize.Op
 
 const controlador = {
   index: function (req, res, next) {
-    // res.send(db)
-    res.render('index', { grama: db.posteos });
-
+    posteos.findAll()
+      .then((resultados) => {
+        return res.render('index', { grama: resultados });
+     
+      }).catch(function(error) {
+        return res.send(error)
+      });
   },
-  resultadoBusqueda: function (req, res, next) {                                            /**CHEQUEAR PEPITO */
-    // let search = req.params.search;
-    // let busqueda = [];
-    // for (let i = 0; i < grama.length; i++) {
-    //   if (search == grama.posteos[i].arroba) {
-    //     busqueda.push(search);
-    //     res.render('resultadoBusqueda', { grama: posteos[i] , busqueda : busqueda })
-    //   };
-    // };
-    // // return res.send("no hay datos de este detalle")
-    // res.send({busqueda})
-      res.render('resultadoBusqueda', { grama: db })
+  resultadoBusqueda: function (req, res, next) {       
+    const datosABuscar =  req.query.busqueda;
+    posteos.findAll({
+      where: [
+        {piePost: {[op.like]: `%${datosABuscar}%`}}
+      ], 
+      order: [
+        ["piePost", "ASC"]
+      ],
+      limit: 10
+// si sobra tiempo, agregar busqueda tb para perfiles de usuarios asi queda mas cool je
+    }).then(function(datosEncontrados) {
+      return res.render('resultadoBusqueda', { grama: datosEncontrados })
+
+    }).catch(function(error) {
+      return res.send(error)
+    });
+
   },
 }
 
-module.exports = controlador;
+
+
+
+
+
+
+
+
+/* 
+const controlador = { 
+  index: function (req, res, next) { 
+    res.render('index', { grama: grama.posteos });
+  },
+  resultadoBusqueda: function (req, res, next) {                                         
+    res.render('resultadoBusqueda', { grama: grama.posteos })
+  },
+}
+*/
+module.exports = controlador; 

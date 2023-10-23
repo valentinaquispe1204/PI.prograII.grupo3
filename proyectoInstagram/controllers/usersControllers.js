@@ -1,6 +1,6 @@
-const grama = require("../db/data");
-var db = require("../db/data")
-const userControllers = {
+const grama = require("../database/models"); 
+
+const userControllers = { 
     detalleUsuario : function(req, res, next) {
       let idPerfil = req.params.id;
       let posteosPerfil = [];
@@ -9,22 +9,22 @@ const userControllers = {
           posteosPerfil.push(grama.posteos[i])
         }        
       }
-      // res.send(posteosPerfil)
-      res.render('detalleUsuario', { grama :db, posteosPerfil:posteosPerfil });
+      
+      return res.render('detalleUsuario', { grama: grama, posteosPerfil:posteosPerfil });
       },
 
 
     editarPerfil : function(req, res, next) {
-        res.render('editarPerfil', { grama: db });
+        return res.render('editarPerfil', { grama: grama });
       },
     login :  function(req, res, next) {
-        res.render('login', { grama: db });
+      return res.render('login', { grama: grama });
       }, 
     miPerfil :  function(req, res, next) {
-             res.render('miPerfil', { grama: db });
+      return res.render('miPerfil', { grama: grama });
       },    
     registracion :  function(req, res, next) {
-        res.render('registracion', { grama: db });
+      return res.render('registracion', { grama: grama });
       },   
 }
 

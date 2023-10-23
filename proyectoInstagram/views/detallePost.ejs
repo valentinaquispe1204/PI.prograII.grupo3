@@ -1,16 +1,19 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/header.ejs') %>
 
-<!-- Aca va el codigo -->
+
 <main>
-    <!-- aca no va un for pq ya iteramos en los controladores!!!!! -->
         <div class="post-detail container">
             <section class="center main-content post">
                 <div class="info-usuario">
                     <img src="<%= grama.fotoPerfil %>" alt="">
-                    <p><a href="/users/detalleUsuario/<%= grama.arroba %>"><%= grama.arroba %></a></p>
+                    <p>
+                        <a href="/users/detalleUsuario/<%= grama.arroba %>">
+                            <%= grama.arroba %> 
+                        </a>
+                    </p>
                 </div>
-                <img class="photo" src="<%= grama.nombreImagen %>" alt="">
+                <img class="photo" src="/images/<%= grama.nombreImagen %>" alt="">
             </section>
             <section class="right">
                 <h4>Comentarios</h4>
@@ -20,12 +23,13 @@
                         <button type="submit">Comentar!</button>
                     </form>
                     <div>
-                      <!-- aca si un for que itere en los comentarios -->
-                    <% for( let i = 0; i < grama.comentarios.length; i++ ) { %>
+                      
+                    <!-- borramos el .length pq tiraba error pero desp vemos -->
+                    <% for( let i = 0; i < grama.comentarios; i++ ) { %>
                     <article class="comment">
-                            <img src="<%= grama.comentarios[i].fotoPerfil %>" alt=""> 
+                            <img src="/images/fotosPerfil/<%= grama.comentarios[i].fotoPerfil %>" alt=""> 
                             <section class="content">
-                                <a class="user" href="/users/detalleUsuario/<%= grama.comentarios[i].idUsuario %>"><%= grama.comentarios[i].idUsuario %></a>
+                                <a class="user" href="/users/detalleUsuario/<%= grama.comentarios[i].IdUsuario %>"><%= grama.comentarios[i].IdUsuario %></a>
                                 <span class="text"><%=grama.comentarios[i].textoComentario %></span>
                             </section>
                         </article>

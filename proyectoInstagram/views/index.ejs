@@ -1,8 +1,5 @@
 <%- include('./partials/head.ejs') %>
     <%- include('./partials/header.ejs') %>
-        <!-- a traves de los tags me permite incluir el header y footer -->
-
-        <!-- Aca va el codigo -->
         <main>
             <section class="center main-content">
 
@@ -14,7 +11,7 @@
                         </div>
                         <div class="post-body">
                             <a href="/products/detallePost/<%= grama[i].idPosteo %>">
-                            <img src="<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
+                            <img src="/images/<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
                         </div>
                         <ul class="post-reacciones"> <!-- el icono de like e icono de comment -->
                             <li>
@@ -29,11 +26,11 @@
                                 <h4>Comentarios</h4>
                                 <ul>
                                     <li>
-                                        <a href="/users/detalleUsuario/<%= grama[i].comentarios.idUsuario %>"><%=grama[i].arroba %></a>
+                                        <a href="/users/detalleUsuario/<%= grama[i].arroba %>"><%=grama[i].arroba %></a>
                                         <span><%= grama[i].piePost %></span>
                                     </li>
 
-                                    <a href="/products/detallePost/<%= grama[i]%>">Ver más...</a>
+                                    <a href="/products/detallePost/<%= grama[i].idPosteo%>">Ver más...</a>
                                 </ul>
                         </div>
                     </article>

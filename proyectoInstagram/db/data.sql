@@ -64,14 +64,14 @@ INSERT INTO usuario (idUsuario, arroba, pass, fotoDePerfil, fecha, dni, createdA
 
 /* -------------------------------- DATOS PARA TABLA POSTEOS ----------------------------*/
 /* POSTS DE USUARIO 1*/
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.1.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.2.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.3.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.4.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.5.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.6.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.7.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.8.jpeg", "",  "1", DEFAULT, DEFAULT, DEFAULT); 
 
 /* POSTS DE USUARIO 2*/
 INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "", "",  "2", DEFAULT, DEFAULT, DEFAULT); 

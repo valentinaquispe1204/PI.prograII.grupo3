@@ -1,5 +1,3 @@
-// BASE DE DATOS //
-// objeto literal grama con arrays (usuarios y posteos) con objetos literales dentro //
 const grama = {
     usuarios: [
         {id: 1,     arroba: "micaschachtl",   fotoPerfil: "/images/fotosPerfil/usuario1.jpg",  pass: 2502,     fecha: "2003-02-25 00:00:00",   dni: 44713206 },

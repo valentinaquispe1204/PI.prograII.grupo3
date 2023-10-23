@@ -1,7 +1,7 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/header.ejs') %>
 
-<!-- Aca va el codigo -->
+
 <main>
     <section class="center main-content">
     <h1>Nuevo Post</h1>
@@ -10,7 +10,7 @@
     </div>
         <div class="form-wrapper">
             <h1 class="formulario1">Añadir post</h1>
-            <form class="form" method="get" action="/users/miPerfil" enctype="multipart/form-data" >
+            <form class="form" method="POST" action="/products/agregarPost"  >
                 <div class="form-item">
                     
                     <input type="text"	name="cover" placeholder="url de la imagen"> 
