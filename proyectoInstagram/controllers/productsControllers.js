@@ -1,6 +1,7 @@
 // requerimos los modelos ya creados
 const grama = require("../database/models");
 const posteos = grama.Posteos
+const bcrypt = require('bcryptjs');
 
 const productsControllers = {
   agregarPost: function (req, res, next) {

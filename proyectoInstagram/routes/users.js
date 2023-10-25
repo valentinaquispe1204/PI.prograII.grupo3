@@ -4,8 +4,7 @@ var router = express.Router();
 const userControllers = require("../controllers/usersControllers")
 
 /*get se encarga de mostrar y post de procesar la informacion son mas seguros y se usan para manipular datos sensibles 
-los nombres de las rutas podrian ser iguales y no habia conflicto
-pq estan usando un metodo diferente*/
+los nombres de las rutas pueden ser iguales y no va a ver  conflicto pq estan usando un metodo diferente*/
 router.get('/detalleUsuario/:id', userControllers.detalleUsuario);  
 router.post('/detalleUsuario/:id', userControllers.detalleUsuario);  
 router.get('/editarPerfil', userControllers.editarPerfil);

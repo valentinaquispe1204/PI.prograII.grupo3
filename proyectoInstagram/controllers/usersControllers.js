@@ -1,5 +1,9 @@
 const grama = require("../database/models"); 
 
+const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing
+
+
+
 const userControllers = { 
     detalleUsuario : function(req, res, next) {
       let idPerfil = req.params.id;
