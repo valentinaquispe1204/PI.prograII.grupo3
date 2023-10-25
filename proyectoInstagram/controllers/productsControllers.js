@@ -5,8 +5,6 @@ const posteos = grama.Posteos
 const productsControllers = {
   agregarPost: function (req, res, next) {
     return res.render('agregarPost')
-
-
   },
 
   procesarForm: function (req, res) {
@@ -16,9 +14,7 @@ const productsControllers = {
       piePost: req.body.description,
       idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
     }
-
-
-    // oara procesar el metodo POST
+    // para procesar el metodo POST
     posteos.create(data)
       .then((resultados) => {
 
