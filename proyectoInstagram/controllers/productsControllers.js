@@ -1,12 +1,11 @@
 // requerimos los modelos ya creados
 const grama = require("../database/models");
 const posteos = grama.Posteos
+const bcrypt = require('bcryptjs');
 
 const productsControllers = {
   agregarPost: function (req, res, next) {
     return res.render('agregarPost')
-
-
   },
 // para procesar el metodo POST de agregarPost
   procesarForm: function (req, res) {
@@ -16,9 +15,7 @@ const productsControllers = {
       piePost: req.body.description,
       idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
     }
-
-
-    
+    // para procesar el metodo POST
     posteos.create(data)
       .then((resultados) => {
 
