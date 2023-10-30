@@ -15,7 +15,7 @@ const productsControllers = {
       piePost: req.body.description,
       idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
     }
-    // para procesar el metodo POST
+
     posteos.create(data)
       .then((resultados) => {
 
@@ -36,7 +36,16 @@ const productsControllers = {
       .catch(function (error) {
         return res.send(error)
       });
-  }
+  },
+  //para procesar metodo POST de detallePost
+  procesarPost: function (req, res) {
+    let data = {
+      textoComentario: req.body.comment,
+      idPosteo: 1,
+      idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
+    }
+},
+
 }
 
 module.exports = productsControllers;
