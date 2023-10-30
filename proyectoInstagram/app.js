@@ -26,9 +26,40 @@ app.use(session({
   resave: false,
   saveUninitialized: true}));
 
+
+app.use(function (req,res,next) {
+  if (req.session.user != undefined) {
+    res.locals.user=req.session.user;
+    res.send(req.session)
+    return next();
+  }
+  return next();
+})
+
+/**Configuracion de cookie */
+app.use(function (req,res,next) {
+  /**Si existe la cokkie del usuario y no existe el usuario en session*/
+  if (req.cookies.userId != undefined && req.session.user== undefined) {
+    let idUsuarioCookie=req.cookies.userId;
+    db.User.findByPk(idUsuarioCookie)
+    .then((user)=>{
+      /*Cargamos el usuario encontrado en la session*/
+      req.session.user=user.dataValues;
+      /**cargar el usuario en locals */
+      res.locals.user=user.dataValues;
+      return next();
+    })
+    .catch((err)=>console.log(err))
+  }else{
+    return next();
+  }
+})
+
+// rutas prefijos
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter); 
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
