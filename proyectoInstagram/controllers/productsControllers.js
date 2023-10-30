@@ -8,7 +8,7 @@ const productsControllers = {
 
 
   },
-
+// para procesar el metodo POST de agregarPost
   procesarForm: function (req, res) {
 
     let data = {
@@ -18,7 +18,7 @@ const productsControllers = {
     }
 
 
-    // oara procesar el metodo POST
+    
     posteos.create(data)
       .then((resultados) => {
 

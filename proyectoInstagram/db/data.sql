@@ -65,14 +65,14 @@ INSERT INTO usuario (idUsuario, arroba, pass, fotoDePerfil, fecha, dni, email, c
 
 /* -------------------------------- DATOS PARA TABLA POSTEOS ------------------(FALTA AGREGAR LOS PIE DE POST)--------------------------------------------*/
 /* POSTS DE USUARIO 1*/
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.1.jpeg", "Viviendo el momento.", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.2.jpeg", "Reflejando sobre la vida.", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.3.jpeg", "Sintiendo la brisa en mi piel.", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.4.jpeg", "Agradeciendo cada dia.", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.5.jpeg", "En busca de nuevas aventuras.", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.6.jpeg", "Explorando lo desconocido.", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.7.jpeg", "Que linda que es la vida!", "1", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.8.jpeg", "Perdido en mis pensamientos.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.1.jpeg", "Viviendo el momento.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.2.jpeg", "Reflejando sobre la vida.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.3.jpeg", "Sintiendo la brisa en mi piel.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.4.jpeg", "Agradeciendo cada dia.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.5.jpeg", "En busca de nuevas aventuras.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.6.jpeg", "Explorando lo desconocido.", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.7.jpeg", "Que linda que es la vida!", "1", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.8.jpeg", "Perdido en mis pensamientos.", "1", DEFAULT, DEFAULT, DEFAULT); 
 
 /* POSTS DE USUARIO 2*/
 INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario2.1.jpeg", "Disfrutando de la tranquilidad.",  "2", DEFAULT, DEFAULT, DEFAULT); 
@@ -96,11 +96,11 @@ INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updat
 INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario4.5.jpeg", "Dejando atrás lo que no me sirve.",  "4", DEFAULT, DEFAULT, DEFAULT); 
 
 /* POSTS DE USUARIO 5*/
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.1.jpeg", "La felicidad está en el interior.",  "5", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.2.jpeg", "Despertando mi espíritu aventurero.",  "5", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.3.jpeg", "El amor es la respuesta.",  "5", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.4.jpeg", "Viviendo con gratitud.",  "5", DEFAULT, DEFAULT, DEFAULT); 
-INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario5.5.jpeg", "Apreciando las pequeñas cosas.",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.1.jpeg", "La felicidad está en el interior.",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.2.jpeg", "Despertando mi espíritu aventurero.",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.3.jpeg", "El amor es la respuesta.",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.4.jpeg", "Viviendo con gratitud.",  "5", DEFAULT, DEFAULT, DEFAULT); 
+INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "usuario1.5.jpeg", "Apreciando las pequeñas cosas.",  "5", DEFAULT, DEFAULT, DEFAULT); 
 
 
 
