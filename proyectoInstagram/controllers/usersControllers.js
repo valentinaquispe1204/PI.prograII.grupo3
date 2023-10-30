@@ -1,5 +1,5 @@
 const grama = require("../database/models");
-const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing
+const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing USARLOOOOOOOO
 
 
 
@@ -42,18 +42,18 @@ const userControllers = {
     let data = {
       arroba: req.body.username,
       pass: req.body.password,
-      // rememberme: TRUE como se pone esto?---------------------------------------
+      rememberme: req.body.rememberme
     }
+    return res.send(data)
   },
 
   miPerfil: function (req, res, next) {
     return res.render('miPerfil', { grama: grama });
-  },
+  }, 
 
   registracion: function (req, res, next) {
-    return res.render('registracion', { grama: grama });
+    return res.render('registracion');
   },
-
   //para procesar metodo POST de registracion
   procesarRegistracion:function (req,res) { 
     let data = {
@@ -64,6 +64,8 @@ const userControllers = {
       dni: req.body.dni,
       email: req.body.email
     }
+
+    return res.send(data)
 }}
 
 module.exports = userControllers;

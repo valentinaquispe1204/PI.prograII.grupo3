@@ -7,7 +7,7 @@ const productsControllers = {
   agregarPost: function (req, res, next) {
     return res.render('agregarPost')
   },
-// para procesar el metodo POST de agregarPost
+//  procesar el metodo POST de agregarPost
 procesarAgregarPost: function (req, res) {
 
     let data = {
@@ -37,7 +37,7 @@ procesarAgregarPost: function (req, res) {
         return res.send(error)
       });
   },
-  //para procesar metodo POST de detallePost
+//para procesar metodo POST de detallePost
   procesarDetallePost: function (req, res) {
     let data = {
       textoComentario: req.body.comment,

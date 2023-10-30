@@ -1,18 +1,18 @@
 // requerimos los modelos ya creados
 const grama = require("../database/models");
 const posteos = grama.Posteos
-const op = grama.Sequelize.Op
+const op = grama.Sequelize.Op // requerimos los operadores de sequelize
 
 const controlador = {
   index: function (req, res, next) {
     posteos.findAll()
       .then((resultados) => {
         return res.render('index', { grama: resultados });
-     
       }).catch(function(error) {
         return res.send(error)
       });
   },
+
   resultadoBusqueda: function (req, res, next) {       
     const datosABuscar =  req.query.busqueda;
     posteos.findAll({
@@ -26,11 +26,9 @@ const controlador = {
 // si sobra tiempo, agregar busqueda tb para perfiles de usuarios asi queda mas cool je
     }).then(function(datosEncontrados) {
       return res.render('resultadoBusqueda', { grama: datosEncontrados })
-
     }).catch(function(error) {
       return res.send(error)
     });
-
   },
 }
 
