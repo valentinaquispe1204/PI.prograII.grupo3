@@ -11,12 +11,12 @@ router.get('/editarPerfil', userControllers.editarPerfil);
 router.post('/editarPerfil', userControllers.procesarPerfil);
 
 router.get('/login', userControllers.login);
-router.post('/login', userControllers.procesarlogin);
+router.post('/login', userControllers.procesarLogin);
 
 router.get('/miPerfil', userControllers.miPerfil);
 
 router.get('/registracion', userControllers.registracion);
-router.post('/registracion', userControllers.procesarregistracion);
+router.post('/registracion', userControllers.procesarRegistracion);
 
 
 

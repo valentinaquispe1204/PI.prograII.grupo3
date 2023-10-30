@@ -8,7 +8,7 @@ const productsControllers = {
     return res.render('agregarPost')
   },
 // para procesar el metodo POST de agregarPost
-  procesarForm: function (req, res) {
+procesarAgregarPost: function (req, res) {
 
     let data = {
       nombreImagen: req.body.cover,
@@ -38,7 +38,7 @@ const productsControllers = {
       });
   },
   //para procesar metodo POST de detallePost
-  procesarPost: function (req, res) {
+  procesarDetallePost: function (req, res) {
     let data = {
       textoComentario: req.body.comment,
       idPosteo: 1,

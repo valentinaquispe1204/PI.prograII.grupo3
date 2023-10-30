@@ -18,8 +18,9 @@ const userControllers = {
   editarPerfil: function (req, res, next) {
     return res.render('editarPerfil', { grama: grama });
   },
+
   //para procesar metodo POST de editarPerfil
-  procesarPerfil: function (req, res) {
+  procesarPerfil: function (req, res) { 
     let data = {
       arroba: req.body.username,
       pass: req.body.password,
@@ -35,8 +36,15 @@ const userControllers = {
   login: function (req, res, next) {
     return res.render('login', { grama: grama });
   },
-  //para procesar metodo POST de login
 
+  //para procesar metodo POST de login
+  procesarLogin: function (req,res) { 
+    let data = {
+      arroba: req.body.username,
+      pass: req.body.password,
+      // rememberme: TRUE como se pone esto?---------------------------------------
+    }
+  },
 
   miPerfil: function (req, res, next) {
     return res.render('miPerfil', { grama: grama });
@@ -45,7 +53,17 @@ const userControllers = {
   registracion: function (req, res, next) {
     return res.render('registracion', { grama: grama });
   },
+
   //para procesar metodo POST de registracion
-}
+  procesarRegistracion:function (req,res) { 
+    let data = {
+      arroba: req.body.username,
+      pass: req.body.password,
+      fotoDePerfil: req.body.img,
+      fecha: req.body.date,
+      dni: req.body.dni,
+      email: req.body.email
+    }
+}}
 
 module.exports = userControllers;
