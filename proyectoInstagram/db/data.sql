@@ -104,7 +104,7 @@ INSERT INTO posteo (idPosteo, nombreImagen, piePost, idUsuario, createdAt, updat
 
 
 
-/* -------------------------------- DATOS PARA TABLA COMENTARIOS --------------------(????FALTA AGREGAR EL USUARIO QUE HACE EL COMENTARIO CON SU FOTITO DE PERFIL O DIRECTAMENTE DESP LO AGARRAMOS DE LA TABLA USUARIOS PARA MOSTRARLO EN LAS VISTAS????)--------------------------------------------------*/
+/* --------------------------------... DATOS PARA TABLA COMENTARIOS --------------------(????FALTA AGREGAR EL USUARIO QUE HACE EL COMENTARIO CON SU FOTITO DE PERFIL O DIRECTAMENTE DESP LO AGARRAMOS DE LA TABLA USUARIOS PARA MOSTRARLO EN LAS VISTAS????)--------------------------------------------------*/
 /*4 comentarios para post 1*/
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "Que buena vibra en esta foto!",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
 INSERT INTO comentario (idComentario, textoComentario, idPosteo, IdUsuario, createdAt, updatedAt, deletedAt) VALUES (DEFAULT, "Estas radiante en esta imagen!",  "1",  "1", DEFAULT, DEFAULT, DEFAULT);
