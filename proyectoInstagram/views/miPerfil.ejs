@@ -5,9 +5,9 @@
 <main>
     <div class="user-detail container">
         <section class="top main-content">
-            <img class="profile" src="<%=grama.posteos[0].fotoPerfil%>" alt="">
+            <img class="profile" src="/images<%=grama.posteos%>" alt="">
             <div class="info-usuario">
-                <p><%= grama.posteos[0].arroba %></p> 
+                <p><%= grama.posteos %></p> 
                 <a class="follow" href="/users/editarPerfil"><i class="fa-solid fa-user-gear"></i></a>
                 <ul class="meta">
                     <li>100 posts</li>
@@ -19,7 +19,7 @@
         <% for( let i = 0; i < 8; i++ ) { %>
             <section class="bottom">
                 <article class="post">
-                    <% if (grama.posteos[i].arroba == grama.posteos[0].arroba) { %>
+                    <% if (grama.posteos.arroba == grama.posteos[i].arroba) { %>
                         <a href="/products/detallePost/<%= grama.posteos[i].idPosteo %>">
                             <img src="<%=grama.posteos[i].nombreImagen  %>" alt="">
                         </a>

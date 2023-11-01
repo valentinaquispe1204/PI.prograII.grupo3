@@ -8,6 +8,7 @@ const session = require('express-session'); //lo instale y requeri
 var indexRouter = require('./routes/index'); 
 var usersRouter = require('./routes/users');
 var productsRouter = require ('./routes/products'); 
+
 var app = express(); 
 
 // view engine setup ..
@@ -29,18 +30,27 @@ app.use(session({
 
 app.use(function (req,res,next) {
   if (req.session.user != undefined) {
-    res.locals.user=req.session.user;
-    res.send(req.session)
+    res.locals.user=req.session.user; 
+
+    res.send(req.session) // despues sacar
     return next();
   }
-  return next();
+    return next();
 })
+
+app.use(function(req,res,next){
+    res.locals.usuarioLogueado = {
+      nombreDeUsuario : req.session.user
+      
+    }
+    return next();
+}),
 
 /**Configuracion de cookie */
 app.use(function (req,res,next) {
   /**Si existe la cokkie del usuario y no existe el usuario en session*/
-  if (req.cookies.userId != undefined && req.session.user== undefined) {
-    let idUsuarioCookie=req.cookies.userId;
+  if (req.cookies.idUsuario != undefined && req.session.user== undefined) {
+    let idUsuarioCookie=req.cookies.idUsuario;
     db.User.findByPk(idUsuarioCookie)
     .then((user)=>{
       /*Cargamos el usuario encontrado en la session*/
