@@ -13,7 +13,7 @@ const controlador = {
       ]
     })
       .then((resultados) => {
-        //  return res.send(resultados[0].comentariosP[0].usersC.arroba)
+        //  return res.send(resultados)
 
 
         return res.render('index', { grama: resultados });

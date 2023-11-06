@@ -29,8 +29,14 @@ procesarAgregarPost: function (req, res) {
 
   detallePost: function (req, res, next) {
     let id = req.params.id
-    posteos.findByPk(id)
+    let relacion = {
+      include: [
+        {association: "usersP"}
+      ]
+    };
+    posteos.findByPk(id, relacion)
       .then((resultadosDetalleP) => {
+        // return res.send(resultadosDetalleP)
         return res.render('detallePost', { grama: resultadosDetalleP })
       })
       .catch(function (error) {
