@@ -8,8 +8,8 @@
                 <div class="info-usuario">
                     <img src="/images/fotosPerfil/<%= grama.usersP.fotoDePerfil %>" alt="">
                     <p>
-                        <a href="/users/detalleUsuario/<%= grama.arroba %>">
-                            <%= grama.arroba %> 
+                        <a href="/users/detalleUsuario/<%= grama.usersP.idUsuario %>">
+                            <%= grama.usersP.arroba %> 
                         </a>
                     </p>
                 </div>
@@ -25,12 +25,12 @@
                     <div>
                       
                     <!-- borramos el .length pq tiraba error pero desp vemos -->
-                    <% for( let i = 0; i < grama.comentarios; i++ ) { %>
+                    <% for( let i = 0; i < 4 ; i++ ) { %>
                     <article class="comment">
-                            <img src="/images/fotosPerfil/<%= grama.comentarios[i].fotoPerfil %>" alt=""> 
+                            <img src="/images/fotosPerfil/<%= grama.comentariosP[i].usersC.fotoDePerfil%>" alt=""> 
                             <section class="content">
-                                <a class="user" href="/users/detalleUsuario/<%= grama.comentarios[i].IdUsuario %>"><%= grama.comentarios[i].IdUsuario %></a>
-                                <span class="text"><%=grama.comentarios[i].textoComentario %></span>
+                                <a class="user" href="/users/detalleUsuario/<%= grama.comentariosP[i].usersC.idUsuario %>"><%= grama.comentariosP[i].usersC.arroba%></a>
+                                <span class="text"><%=grama.comentariosP[i].textoComentario %></span>
                             </section>
                         </article>
                     <% } %>

@@ -7,8 +7,8 @@ const productsControllers = {
   agregarPost: function (req, res, next) {
     return res.render('agregarPost')
   },
-//  procesar el metodo POST de agregarPost
-procesarAgregarPost: function (req, res) {
+  //  procesar el metodo POST de agregarPost
+  procesarAgregarPost: function (req, res) {
 
     let data = {
       nombreImagen: req.body.cover,
@@ -31,26 +31,33 @@ procesarAgregarPost: function (req, res) {
     let id = req.params.id
     let relacion = {
       include: [
-        {association: "usersP"}
-      ]
-    };
-    posteos.findByPk(id, relacion)
-      .then((resultadosDetalleP) => {
-        // return res.send(resultadosDetalleP)
-        return res.render('detallePost', { grama: resultadosDetalleP })
-      })
-      .catch(function (error) {
-        return res.send(error)
-      });
-  },
-//para procesar metodo POST de detallePost
+        {
+          association: "usersP"
+        },
+        {
+          association: "comentariosP", include: [
+            { association: "usersC" }
+          ]
+        }
+    ]
+  };
+  posteos.findByPk(id, relacion)
+    .then((resultadosDetalleP) => {
+      // return res.send(resultadosDetalleP)
+      return res.render('detallePost', { grama: resultadosDetalleP })
+    })
+    .catch(function (error) {
+      return res.send(error)
+    });
+},
+  //para procesar metodo POST de detallePost
   procesarDetallePost: function (req, res) {
     let data = {
       textoComentario: req.body.comment,
       idPosteo: 1,
       idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
     }
-},
+  },
 
 }
 
