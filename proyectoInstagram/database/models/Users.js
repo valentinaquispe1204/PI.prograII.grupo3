@@ -8,7 +8,7 @@ let cols = {
         type: dataTypes.INTEGER
     
     },
-    mail: {
+    email: {
         type: dataTypes.STRING(400)
     },
 
@@ -44,7 +44,7 @@ let cols = {
 }
 
 let config = {  
-    tableName : "users",
+    tableName : "usuario",
     timestamps: true,
     underscored: false,
 }

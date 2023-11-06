@@ -25,7 +25,7 @@ module.exports = function(sequelize, dataTypes) {
     }
     
     let config = {  
-        tableName : "comentarios",
+        tableName : "comentario",
         timestamps: true,
         underscored: false,
     }
@@ -44,7 +44,7 @@ module.exports = function(sequelize, dataTypes) {
         /*relacionamos usuarios con comentarios */
         Comentarios.belongsTo(models.Users, {
             as: "usersC",
-            foreignKey: "idComentario",
+            foreignKey: "idUsuario",
         })
         
     

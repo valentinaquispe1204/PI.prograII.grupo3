@@ -5,8 +5,17 @@ const op = grama.Sequelize.Op // requerimos los operadores de sequelize
 
 const controlador = {
   index: function (req, res, next) {
-    posteos.findAll()
+   
+    posteos.findAll({
+      include:[
+        {association: "usersP"},
+        {association:"comentariosP", include: {association: "usersC"}}
+      ]
+    })
       .then((resultados) => {
+        //  return res.send(resultados[0].comentariosP[0].usersC.arroba)
+
+
         return res.render('index', { grama: resultados });
       }).catch(function(error) {
         return res.send(error)

@@ -6,14 +6,19 @@
                 <% for( let i=0; i < grama.length; i++ ) { %>
                     <article class="post">
                         <div class="info-usuario">
-                            <img src="/images/<%= grama[i].fotoDePerfil %>" alt="">
-                            <a href="<%=grama[i].arroba %>"><%= locals.usuarioLogueado.nombreDeUsuario %></a>
+                            <img src="/images/fotosPerfil/<%= grama[i].usersP.fotoDePerfil %>" alt="">
+                            <a href="/users/detalleUsuario/<%=grama[i].idUsuario%>">
+                                <%= grama[i].usersP.arroba %>
+                            </a>
+                            <!-- NOS FALTA EL HREF -->
                         </div>
                         <div class="post-body">
                             <a href="/products/detallePost/<%= grama[i].idPosteo %>">
-                            <img src="/images/<%= grama[i].nombreImagen %>" alt="/products/<%=grama[i].piePost %>">
+                                <img src="/images/<%= grama[i].nombreImagen %>">
+
                         </div>
-                        <ul class="post-reacciones"> <!-- el icono de like e icono de comment -->
+                        <ul class="post-reacciones">
+                            <!-- el icono de like e icono de comment -->
                             <li>
                                 <i class="fa-regular fa-heart"></i>
                             </li>
@@ -22,19 +27,31 @@
                             </li>           
                         </ul>
                         <div class="post-comentarios">
-                            <a href="<%=grama[i].arroba %>"><%= grama[i].piePost %></a>
-                                <h4>Comentarios</h4>
-                                <ul>
-                                    <li>
-                                        <a href="/users/detalleUsuario/<%= grama[i].arroba %>"><%=grama[i].arroba %></a>
-                                        <span><%= grama[i].piePost %></span>
-                                    </li>
+                            <!--arroba y pie post del usuario del post-->
+                            <a href="/users/detalleUsuario/<%=grama[i].idUsuario%>">
+                                <%= grama[i].usersP.arroba %>
+                            </a>
+                            <span>
+                                <%= grama[i].piePost %>
+                            </span>
 
-                                    <a href="/products/detallePost/<%= grama[i].idPosteo%>">Ver más...</a>
-                                </ul>
+                            <h4>Comentarios</h4>
+                            <ul>
+                                <li>
+                                    <a href="/users/detalleUsuario/<%= grama[i].comentariosP.idUsuario %>">
+                                        <%=grama[i].comentariosP[0].usersC.arroba %></a>
+                                    <span><%=grama[i].comentariosP[0].textoComentario%></span>
+                                </li>
+                             
+                                   
+                             
+                                
+
+                                <a href="/products/detallePost/<%= grama[i].idPosteo%>">Ver más...</a>
+                            </ul>
                         </div>
                     </article>
-                <% } %>
+                    <% } %>
 
             </section>
         </main>
