@@ -51,7 +51,7 @@ app.use(function (req,res,next) {
   /**Si existe la cokkie del usuario y no existe el usuario en session*/
   if (req.cookies.idUsuario != undefined && req.session.user== undefined) {
     let idUsuarioCookie=req.cookies.idUsuario;
-    db.User.findByPk(idUsuarioCookie)
+    grama.Users.findByPk(idUsuarioCookie)
     .then((user)=>{
       /*Cargamos el usuario encontrado en la session*/
       req.session.user=user.dataValues;

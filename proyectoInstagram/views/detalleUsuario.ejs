@@ -7,11 +7,10 @@
             <div class="user-detail container">
                 <section class="top main-content">
                      
-                    <img class="profile" src="<%=posteosPerfil[0].fotoPerfil %>" alt=""> 
+                    <img class="profile" src="/images/fotosPerfil/<%=grama.fotoDePerfil %>" alt=""> 
                     <div class="info-usuario">
-                        <p>
-                            <%= posteosPerfil[0].arroba %>
-                        </p>
+                        <p> <%= grama.arroba %></p>
+
                         <a class="follow" href="">seguir</a>
                         <ul class="meta">
                             <li>100 posts</li>
@@ -21,11 +20,12 @@
                     </div>
                 </section>
 
-                <% for( let i=0; i < 3; i++ ) { %>
+                <% for( let i=0; i < grama.posteosU.length; i++ ) { %>
                     <section class="bottom">
                         <article class="post">
-                            <a href="/products/detallePost/<%= posteosPerfil[i].idPosteo %>">
-                                <img src="<%= posteosPerfil[i].nombreImagen %>" alt="<%=posteosPerfil[i].piePost %>">
+                            <a href="/products/detallePost/<%= grama.posteosU[i].idPosteo %>">
+                                <img src="<%= grama.posteosU[i].nombreImagen %>" alt="">
+                                <p> <%= grama.posteosU[i].piePost  %></p>
                             </a>
                         </article>
                     </section>

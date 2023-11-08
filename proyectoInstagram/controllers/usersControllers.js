@@ -1,20 +1,25 @@
 const grama = require("../database/models");
+let usuarios = grama.Users;
 const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing USARLOOOOOOOO
 
 
 
 const userControllers = {
   detalleUsuario: function (req, res, next) {
-    // let idPerfil = req.params.id;
-    // let posteosPerfil = [];
-    
-    // for (let i = 0; i < grama.posteos.length; i++) {
-    //   if (idPerfil == grama.posteos[i].arroba) {
-    //     posteosPerfil.push(grama.posteos[i])
-    //   }
-    // }
-    return res.send(grama)
-    return res.render('detalleUsuario', { grama: grama, posteosPerfil: posteosPerfil });
+    let id = req.params.id
+    let relacion = {
+      include: [
+        {association: "posteosU"} // chequear desp si esta bien
+      ]
+    }
+    usuarios.findByPk(id, relacion)
+    .then(function(resultadosDetalleU)  {
+      // return res.send(resultadosDetalleU)
+      return res.render('miPerfil', { grama: resultadosDetalleU });
+   })
+   .catch(function(error)  {
+       res.send(error)
+   })
   },
 
   editarPerfil: function (req, res) {
@@ -59,7 +64,7 @@ const userControllers = {
       ]
     }
 
-    grama.Users.findByPk(id , relacion)
+    usuarios.findByPk(id , relacion)
     .then(function(usuario)  {
        res.send(usuario)
         res.render('miPerfil', { grama: usuario });
