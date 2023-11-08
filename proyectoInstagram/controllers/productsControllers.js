@@ -42,16 +42,17 @@ const productsControllers = {
     ]
   };
   posteos.findByPk(id, relacion)
-    .then((resultadosDetalleP) => {
+    .then(function(resultadosDetalleP) {
       // return res.send(resultadosDetalleP)
       return res.render('detallePost', { grama: resultadosDetalleP })
     })
     .catch(function (error) {
       return res.send(error)
-    });
-},
+    })
+  },
+
   //para procesar metodo POST de detallePost
-  procesarDetallePost: function (req, res) {
+  procesarDetallePost: function (req, res, next) {
     let data = {
       textoComentario: req.body.comment,
       idPosteo: 1,

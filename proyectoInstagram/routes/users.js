@@ -14,7 +14,7 @@ router.post('/editarPerfil', userControllers.procesarPerfil);
 router.get('/login', userControllers.login);
 router.post('/login', userControllers.procesarLogin); 
 
-router.get('/miPerfil', userControllers.miPerfil); //no tiene form asi que no hay ruta post?
+router.get('/miPerfil/:id', userControllers.miPerfil); //no tiene form asi que no hay ruta post?
 
 router.get('/registracion', userControllers.registracion);
 router.post('/registracion', userControllers.procesarRegistracion);

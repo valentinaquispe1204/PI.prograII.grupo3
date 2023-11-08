@@ -5,17 +5,19 @@ const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing 
 
 const userControllers = {
   detalleUsuario: function (req, res, next) {
-    let idPerfil = req.params.id;
-    let posteosPerfil = [];
-    for (let i = 0; i < grama.posteos.length; i++) {
-      if (idPerfil == grama.posteos[i].arroba) {
-        posteosPerfil.push(grama.posteos[i])
-      }
-    }
+    // let idPerfil = req.params.id;
+    // let posteosPerfil = [];
+    
+    // for (let i = 0; i < grama.posteos.length; i++) {
+    //   if (idPerfil == grama.posteos[i].arroba) {
+    //     posteosPerfil.push(grama.posteos[i])
+    //   }
+    // }
+    return res.send(grama)
     return res.render('detalleUsuario', { grama: grama, posteosPerfil: posteosPerfil });
   },
 
-  editarPerfil: function (req, res, next) {
+  editarPerfil: function (req, res) {
     return res.render('editarPerfil', { grama: grama });
   },
 
@@ -48,10 +50,26 @@ const userControllers = {
   },
 
   miPerfil: function (req, res, next) {
-    return res.render('miPerfil', { grama: grama });
-  }, 
+    let id = req.params.id
+    let relacion = {
+      include: [
+        {
+        association: "posteosU"
+        }
+      ]
+    }
 
-  registracion: function (req, res, next) {
+    grama.Users.findByPk(id , relacion)
+    .then(function(usuario)  {
+       res.send(usuario)
+        res.render('miPerfil', { grama: usuario });
+    })
+    .catch(function(error)  {
+        res.send(error)
+    })
+  },
+
+  registracion: function (req, res) {
     return res.render('registracion');
   },
   //para procesar metodo POST de registracion
