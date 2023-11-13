@@ -6,14 +6,15 @@
 
             <div class="user-detail container">
                 <section class="top main-content">
-                     
+                     <a href="">
                     <img class="profile" src="/images/fotosPerfil/<%=grama.fotoDePerfil %>" alt=""> 
+                </a>
                     <div class="info-usuario">
                         <p> <%= grama.arroba %></p>
 
                         <a class="follow" href="">seguir</a>
                         <ul class="meta">
-                            <li>100 posts</li>
+                            <li><%= grama.posteosU.length %> posteos</li>
                             <li>200 seguidores</li>
                             <li>300 seguidos</li>
                         </ul>
@@ -24,7 +25,7 @@
                     <section class="bottom">
                         <article class="post">
                             <a href="/products/detallePost/<%= grama.posteosU[i].idPosteo %>">
-                                <img src="<%= grama.posteosU[i].nombreImagen %>" alt="">
+                                <img src="/images/<%=grama.posteosU[i].nombreImagen %>" alt="">
                                 <p> <%= grama.posteosU[i].piePost  %></p>
                             </a>
                         </article>

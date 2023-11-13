@@ -15,7 +15,9 @@ const userControllers = {
     usuarios.findByPk(id, relacion)
     .then(function(resultadosDetalleU)  {
       // return res.send(resultadosDetalleU)
-      return res.render('miPerfil', { grama: resultadosDetalleU });
+
+
+      return res.render('detalleUsuario', { grama: resultadosDetalleU });
    })
    .catch(function(error)  {
        res.send(error)
