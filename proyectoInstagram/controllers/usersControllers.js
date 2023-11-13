@@ -9,19 +9,19 @@ const userControllers = {
     let id = req.params.id
     let relacion = {
       include: [
-        {association: "posteosU"} // chequear desp si esta bien
+        { association: "posteosU" } // chequear desp si esta bien
       ]
     }
     usuarios.findByPk(id, relacion)
-    .then(function(resultadosDetalleU)  {
-      // return res.send(resultadosDetalleU)
+      .then(function (resultadosDetalleU) {
+        // return res.send(resultadosDetalleU)
 
 
-      return res.render('detalleUsuario', { grama: resultadosDetalleU });
-   })
-   .catch(function(error)  {
-       res.send(error)
-   })
+        return res.render('detalleUsuario', { grama: resultadosDetalleU });
+      })
+      .catch(function (error) {
+        res.send(error)
+      })
   },
 
   editarPerfil: function (req, res) {
@@ -29,7 +29,7 @@ const userControllers = {
   },
 
   //para procesar metodo POST de editarPerfil
-  procesarPerfil: function (req, res) { 
+  procesarPerfil: function (req, res) {
     let data = {
       arroba: req.body.username,
       pass: req.body.password,
@@ -47,13 +47,45 @@ const userControllers = {
   },
 
   //para procesar metodo POST de login
-  procesarLogin: function (req,res) { 
-    let data = {
-      arroba: req.body.username,
-      pass: req.body.password,
-      rememberme: req.body.rememberme
-    }
-    return res.send(data)
+  procesarLogin: function (req, res) {
+
+    let emailBuscado = req.body.username;
+    let pass = req.body.password;
+    let rememberme = req.body.rememberme;
+    let criterio = {
+      where: [{ email: emailBuscado }]
+    };
+
+    console.log(rememberme != undefined);
+
+    grama.Users.findOne(criterio)
+      .then((result) => {
+// res.send(result)
+// res.send(locals.Users)
+
+        if (result != null) {
+          let check = bcrypt.compareSync(pass, result.pass) //devuekve un bool
+// return res.send(check)
+          if (check) {
+            req.session.user = result.dataValues;
+            if (rememberme != undefined) {
+              res.cookie('idUsuario', result.id, { maxAge: 1000 * 60 * 5 })  //nombre, valor, y el tiempo que va a durar la cookie
+            }
+            
+          } else {
+            return res.render("login")
+          }
+
+        } else {
+          return res.send("No existe el mail " + emailBuscado)
+        }
+
+
+      }).catch((err) => {
+        return console.log(err);
+      });
+
+      return res.redirect("/")
   },
 
   miPerfil: function (req, res, next) {
@@ -61,36 +93,43 @@ const userControllers = {
     let relacion = {
       include: [
         {
-        association: "posteosU"
+          association: "posteosU"
         }
       ]
     }
 
-    usuarios.findByPk(id , relacion)
-    .then(function(usuario)  {
-       res.send(usuario)
+    usuarios.findByPk(id, relacion)
+      .then(function (usuario) {
+        res.send(usuario)
         res.render('miPerfil', { grama: usuario });
-    })
-    .catch(function(error)  {
+      })
+      .catch(function (error) {
         res.send(error)
-    })
+      })
   },
 
   registracion: function (req, res) {
     return res.render('registracion');
   },
   //para procesar metodo POST de registracion
-  procesarRegistracion:function (req,res) { 
+  procesarRegistracion: function (req, res) {
     let data = {
       arroba: req.body.username,
-      pass: req.body.password,
+      pass: bcrypt.hashSync(req.body.password,10),
       fotoDePerfil: req.body.img,
       fecha: req.body.date,
       dni: req.body.dni,
-      email: req.body.email
-    }
-
-    return res.send(data)
-}}
+      email: req.body.email,
+      rememberToken : "false"
+    };
+    grama.Users.create(data)
+    .then((result) => {
+        return res.redirect("/users/login");
+    }).catch((error) => {
+        return console.log(error);
+    });
+    // return res.send(data)
+  }
+}
 
 module.exports = userControllers;
