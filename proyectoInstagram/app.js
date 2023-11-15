@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require ('./routes/products'); 
 
+const grama = require("./database/models")
 var app = express(); 
 
 // view engine setup ..
@@ -30,7 +31,7 @@ app.use(session({
 
 app.use(function (req,res,next) {
   if (req.session.user != undefined) {
-    res.locals.user=req.session.user; 
+    res.locals.usu=req.session.user; 
 
     res.send(req.session) // despues sacar
     return next();

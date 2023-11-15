@@ -58,8 +58,10 @@ const productsControllers = {
       idPosteo: 1,
       idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
     }
+    
   },
 
 }
 
 module.exports = productsControllers;
+

@@ -9,7 +9,7 @@ let cols = {
     
     },
     email: {
-        type: dataTypes.STRING(400)
+        type: dataTypes.STRING
     },
 
     arroba: {
