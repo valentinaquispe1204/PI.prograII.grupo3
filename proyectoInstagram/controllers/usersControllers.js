@@ -3,10 +3,9 @@ let usuarios = grama.Users;
 const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing USARLOOOOOOOO
 
 
-
 const userControllers = {
   detalleUsuario: function (req, res, next) {
-    let id = req.params.id
+    let id = req.params.id;
     let relacion = {
       include: [
         {association: "posteosU"} // chequear desp si esta bien
