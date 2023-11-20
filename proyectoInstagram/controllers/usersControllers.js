@@ -40,45 +40,55 @@ const userControllers = {
   },
 
 
-
   login: function (req, res, next) {
     return res.render('login', { grama: grama });
   },
 
   //para procesar metodo POST de login
   procesarLogin: function (req, res) {
-
     let emailBuscado = req.body.username;
-    let pass = req.body.password;
+    let pass2 = req.body.password;
     let rememberme = req.body.rememberme;
     let criterio = {
       where: [{ email: emailBuscado }]
     };
 
-    console.log(rememberme != undefined);
+        grama.Users.findOne(criterio)
+            .then((result) => {
 
-    grama.Users.findOne(criterio)
-      .then((result) => {
+                if (result != null) {
+                    let claveCorrecta = bcrypt.compareSync(pass2, result.pass)
+                    if (claveCorrecta) {
 
-        if (result != null) {
-          let check = bcrypt.compareSync(pass, result.pass) //devuekve un bool
+                        req.session.user = {
+                            id: result.idUsuario,
+                            arroba: result.arroba,
+                            email: result.email,
+                            fotoPerfil: result.fotoDePerfil,
+                        }
+                        
+                        if (req.body.rememberme != undefined) {
+                            res.cookie('usuarioId', result.idUsuario, { maxAge: 1000 * 60 * 15 })
+                        }
+                        return res.redirect("/");
+                    } else {
+                        return res.send("Existe el usuario  pero la password es incorrecta");
+                    }
+                } else {
+                    return res.send("El usuario es invalido")
+                 }
 
-          if (check) {
-            req.session.user = result.dataValues;
-            if (rememberme != undefined) {
-              res.cookie('idUsuario', result.id, { maxAge: 1000 * 60 * 5 })  //nombre, valor, y el tiempo que va a durar la cookie
-              return res.redirect("/")
-            }   
-          } else {
-            return res.redirect("/users/login")
-          }
-        } else {
-          return res.redirect("/users/login")
-        }
-      }).catch((err) => {
-        return console.log(err);
-      });
+            }).catch((err) => {
+                console.log(err);
+            });
 
+    },
+
+    
+  logout: (req, res) => {
+      req.session.destroy();// Eliminar la sesión del usuario y redireccionar a la página de inicio de sesión
+      res.clearCookie('usuarioId');
+      res.redirect('/');
   },
 
   miPerfil: function (req, res, next) {
