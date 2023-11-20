@@ -4,14 +4,13 @@
             <a href="/"><img class="imagenLogo" src="/images/logoGrama.jpg" alt=""></a>
         </div>
 
-        <div class = "search">
+        <div class="search">
             <form action="/resultadoBusqueda" method="get" class="search-form">
                 <!-- NO SACAR EL BUSQUEDA!!!!!! -->
-                    <input type="text" name= "busqueda" placeholder=" Buscá un pie de post" 
-                        class="search-form_input">
-                    <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                <input type="text" name="busqueda" placeholder=" Buscá un pie de post" class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
             </form>
-        
+
         </div>
 
         <div class="navbar-right">
@@ -20,11 +19,24 @@
                 <li><a href="/users/login">Login</a></li>
                 <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
                 <li><a href="/products/agregarPost"><i class="fa-regular fa-square-plus"></i></a></li>
-                <li><a href="/users/miperfil/<%= locals.user.id %>"><i class="fa-regular fa-user"></i></a></li> 
+                <li><a href="/users/miperfil/<%= locals.user.id %>"><i class="fa-regular fa-user"></i></a></li>
                 <!-- AGREGAR ID USUARIO ACTIVO CON LOCALS.USER-->
                 <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
+                <li><a href="/users/miPerfil/<%= locals.user.id %>">
+                        <%= locals.user.arroba %> <i class="fas fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <form action="/users/logout" method="post">
+                        <button class="logout" type="submit">
+                            Cerrar sesión <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                    </form>
+                </li>
             </ul>
-        </div> 
+
+        </div>
+
 
     </nav>
 </header>
