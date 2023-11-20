@@ -44,7 +44,6 @@ const userControllers = {
   },
 
 
-
   login: function (req, res, next) {
 
     if (req.session.user != undefined) {
@@ -57,7 +56,6 @@ const userControllers = {
 
   //para procesar metodo POST de login
   procesarLogin: function (req, res) {
-
     let emailBuscado = req.body.username;
     let pass2 = req.body.password;
     let rememberme = req.body.rememberme;
@@ -66,45 +64,42 @@ const userControllers = {
       where: [{ email: emailBuscado }]
     };
 
-    if (emailBuscado == "") {
-      errores.message = "el campo de email esta vacio";
-      res.locals.errores;
-      return res.render("login");
-    } else if (pass2 == "") {
-      errores.message = "el campo de contraseña esta vacio";
-      res.locals.errores;
-      return res.render("login");
-    } else {
-    grama.Users.findOne(criterio)
-      .then((result) => {
-        if (result != null) {
-          let checkContra = bcrypt.compareSync(pass2, result.pass) //devuekve un bool
+        grama.Users.findOne(criterio)
+            .then((result) => {
 
+                if (result != null) {
+                    let claveCorrecta = bcrypt.compareSync(pass2, result.pass)
+                    if (claveCorrecta) {
 
+                        req.session.user = {
+                            id: result.idUsuario,
+                            arroba: result.arroba,
+                            email: result.email,
+                            fotoPerfil: result.fotoDePerfil,
+                        }
+                        
+                        if (req.body.rememberme != undefined) {
+                            res.cookie('usuarioId', result.idUsuario, { maxAge: 1000 * 60 * 15 })
+                        }
+                        return res.redirect("/");
+                    } else {
+                        return res.send("Existe el usuario  pero la password es incorrecta");
+                    }
+                } else {
+                    return res.send("El usuario es invalido")
+                 }
 
-          if (checkContra && checkEmail) {
-            req.session.usuario = {
-              id: result.id,
-              arroba: result.arroba,
-              email: result.email,
-              fotoDePerfil: result.fotoDePerfil,
-            }
-            if (rememberme != undefined) {
-              res.cookie('idUsuario', result.id, { maxAge: 1000 * 60 * 5 })  //nombre, valor, y el tiempo que va a durar la cookie
-              return res.redirect("/")
-            }
-          } else {
-            return res.redirect("/users/login")
-          }
-        } else {
-          return res.redirect("/users/login")
-        }
-      }).catch((err) => {
-        return console.log(err);
-      });
+            }).catch((err) => {
+                console.log(err);
+            });
 
-    return res.redirect("/")
-  }
+    },
+
+    
+  logout: (req, res) => {
+      req.session.destroy();// Eliminar la sesión del usuario y redireccionar a la página de inicio de sesión
+      res.clearCookie('usuarioId');
+      res.redirect('/');
   },
 
 
