@@ -1,6 +1,13 @@
 <%- include('./partials/head.ejs') %>
-    <%- include('./partials/header.ejs') %>
+    
         <main>
+            
+            <% if (locals.user != undefined) { %>
+                <%- include('./partials/headerLogueado.ejs') %>
+            <% } else { %>
+                <%- include('./partials/header.ejs') %>
+            <% }  %> 
+
             <section class="center main-content">
                 <% if (locals.user!=undefined) { %>
                     <h1 class="index-title">Bienvenido <%= locals.user.email %></h1>

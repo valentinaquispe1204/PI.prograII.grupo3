@@ -4,11 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session'); //lo instale y requeri
-
 var indexRouter = require('./routes/index'); 
 var usersRouter = require('./routes/users');
 var productsRouter = require ('./routes/products'); 
-
 const grama = require("./database/models")
 var app = express(); 
 
@@ -22,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 //configuracion de session
 app.use(session({ 
   secret: "proyectoIntegradorInstagram",
@@ -32,8 +31,6 @@ app.use(session({
 app.use(function (req,res,next) {
   if (req.session.user != undefined) {
     res.locals.usu=req.session.user; 
-
-    res.send(req.session) // despues sacar
     return next();
   }
     return next();
@@ -42,10 +39,11 @@ app.use(function (req,res,next) {
 app.use(function(req,res,next){
     res.locals.usuarioLogueado = {
       nombreDeUsuario : req.session.user
-      
     }
+
     return next();
 }),
+
 
 /**Configuracion de cookie */
 app.use(function (req,res,next) {
@@ -58,6 +56,7 @@ app.use(function (req,res,next) {
       req.session.user=user.dataValues;
       /**cargar el usuario en locals */
       res.locals.user=user.dataValues;
+      // return req.send(locals.user)
       return next();
     })
     .catch((err)=>console.log(err))
@@ -65,6 +64,7 @@ app.use(function (req,res,next) {
     return next();
   }
 })
+
 
 // rutas prefijos
 app.use('/', indexRouter);
