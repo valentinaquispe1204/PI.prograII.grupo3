@@ -33,7 +33,9 @@ app.use(function (req,res,next) {
     res.locals.user=req.session.user; 
 
     res.send(req.session) // despues sacar
+    console.log(res.locals.user);
     return next();
+    
   }
     return next();
 })
