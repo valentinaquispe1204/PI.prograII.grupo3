@@ -1,8 +1,18 @@
 <%- include('./partials/head.ejs') %>
-    <%- include('./partials/header.ejs') %>
+    
         <main>
-            <section class="center main-content">
+            
+            <% if (locals.user != undefined) { %>
+                <%- include('./partials/headerLogueado.ejs') %>
+            <% } else { %>
+                <%- include('./partials/header.ejs') %>
+            <% }  %> 
 
+            <section class="center main-content">
+                <% if (locals.user!=undefined) { %>
+                    <h1 class="index-title">Bienvenido <%= locals.user.email %></h1>
+                  <% } %>
+              
                 <% for( let i=0; i < grama.length; i++ ) { %>
                     <article class="post">
                         <div class="info-usuario">

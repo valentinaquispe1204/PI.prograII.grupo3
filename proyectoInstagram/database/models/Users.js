@@ -9,7 +9,7 @@ let cols = {
     
     },
     email: {
-        type: dataTypes.STRING(400)
+        type: dataTypes.STRING
     },
 
     arroba: {
@@ -18,7 +18,7 @@ let cols = {
     },
    
     pass: {
-        type: dataTypes.STRING(45)
+        type: dataTypes.STRING(200)
     },
     fotoDePerfil: {
         type: dataTypes.STRING(400)
