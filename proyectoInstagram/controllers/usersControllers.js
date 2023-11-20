@@ -3,10 +3,9 @@ let usuarios = grama.Users;
 const bcrypt = require('bcryptjs'); //requiero el modulo instalado para hashing USARLOOOOOOOO
 
 
-
 const userControllers = {
   detalleUsuario: function (req, res, next) {
-    let id = req.params.id
+    let id = req.params.id;
     let relacion = {
       include: [
         { association: "posteosU" } // chequear desp si esta bien
@@ -81,23 +80,22 @@ const userControllers = {
 
     grama.Users.findOne(criterio)
       .then((result) => {
+
         if (result != null) {
           let check = bcrypt.compareSync(pass, result.pass) //devuekve un bool
+
           if (check) {
             req.session.user = result.dataValues;
             if (rememberme != undefined) {
               res.cookie('idUsuario', result.id, { maxAge: 1000 * 60 * 5 })  //nombre, valor, y el tiempo que va a durar la cookie
-            }
-
+              return res.redirect("/")
+            }   
           } else {
-            return res.render("login")
+            return res.redirect("/users/login")
           }
-
         } else {
-          return res.send("No existe el mail " + emailBuscado)
+          return res.redirect("/users/login")
         }
-
-
       }).catch((err) => {
         return console.log(err);
       });

@@ -6,11 +6,11 @@ CREATE TABLE usuario(
 /* nombreColumna				tipoDato			restricciones/connstraints (unsigned=numeros positivos)*/
 idUsuario						INT					UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 arroba							VARCHAR(50)			NOT NULL,
-pass							VARCHAR(45)			NOT NULL,
+pass							VARCHAR(300)		NOT NULL,
 fotoDePerfil					VARCHAR(200)		NOT NULL,
 fecha							TIMESTAMP			NOT NULL,
 dni								INT					NOT NULL,
-email                           VARCHAR(50)          NOT NULL,
+email                           VARCHAR(50)         NOT NULL,
 /* campos de auditoria */
 createdAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP,
 updatedAt						TIMESTAMP			DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
