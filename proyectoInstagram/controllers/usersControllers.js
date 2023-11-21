@@ -118,7 +118,7 @@ const userControllers = {
 
         if (usuario != null) {
           // return res.send(usuario)
-          return res.redirect("/miPerfil/id")
+          res.render('miPerfil', { grama: result});
           let check = bcrypt.compareSync(pass, result.pass) //devuekve un bool
 
         } else {
