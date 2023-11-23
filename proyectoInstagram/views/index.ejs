@@ -1,12 +1,14 @@
 <%- include('./partials/head.ejs') %>
-    
-        <main>
-            
-            <% if (locals.user != undefined) { %>
+
+
+     <% if (locals.user != undefined) { %>
                 <%- include('./partials/headerLogueado.ejs') %>
             <% } else { %>
                 <%- include('./partials/header.ejs') %>
             <% }  %> 
+
+
+        <main>
 
             <section class="center main-content">
                 <% if (locals.user!=undefined) { %>
@@ -47,15 +49,8 @@
 
                             <h4>Comentarios</h4>
                             <ul>
-                                <li>
-                                    <a href="/users/detalleUsuario/<%= grama[i].comentariosP.idUsuario %>">
-                                        <%=grama[i].comentariosP[0].usersC.arroba %></a>
-                                    <span><%=grama[i].comentariosP[0].textoComentario%></span>
-                                </li>
-                             
-                                   
-                             
                                 
+                             
 
                                 <a href="/products/detallePost/<%= grama[i].idPosteo%>">Ver más...</a>
                             </ul>

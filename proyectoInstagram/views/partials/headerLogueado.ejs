@@ -19,13 +19,10 @@
                 <li><a href="/users/login">Login</a></li>
                 <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
                 <li><a href="/products/agregarPost"><i class="fa-regular fa-square-plus"></i></a></li>
-                <li><a href="/users/miPerfil/<%= locals.user %>"><i class="fa-regular fa-user"></i></a></li>
+               
                 <!-- AGREGAR ID USUARIO ACTIVO CON LOCALS.USER-->
-                <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li>
-                <li><a href="/users/miPerfil/<%= locals.user%>">
-                        <%= locals.user.arroba %> <i class="fas fa-user"></i>
-                    </a>
-                </li>
+                <li><a href="/users/miPerfil/<%= locals.user%>"><%= locals.user.arroba %> <i class="fas fa-user"></i></a></li>
+
                 <li>
                     <form action="/users/logout" method="post">
                         <button class="logout" type="submit">

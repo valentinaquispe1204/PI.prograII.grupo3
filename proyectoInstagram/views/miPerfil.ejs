@@ -1,5 +1,11 @@
 <%- include('./partials/head.ejs') %>
-<%- include('./partials/header.ejs') %>
+
+    <% if (locals.user != undefined) { %>
+        <%- include('./partials/headerLogueado.ejs') %>
+    <% } else { %>
+        <%- include('./partials/header.ejs') %>
+    <% }  %> 
+
 
 <!-- Aca va el codigo -->
 <main>
@@ -10,7 +16,7 @@
                 <p><%= grama.arroba %></p> 
                 <a class="follow" href="/users/editarPerfil"><i class="fa-solid fa-user-gear"></i></a>
                 <ul class="meta">
-                    <li><%=grama.posteosU.length%></li>
+                    <li><%=grama.posteosU.length%> posteos</li>
                     <li>200 seguidores</li>
                     <li>300 seguidos</li>
                 </ul>
@@ -20,7 +26,8 @@
             <section class="bottom">
                 <article class="post">
                         <a href="/products/detallePost/<%= grama.posteosU[i].idPosteo %>">
-                            <img src="<%=grama.posteosU[i].nombreImagen  %>" alt="">
+                            <img src="<%=grama.posteosU[i].nombreImagen %>" alt="">
+                            <p><%=grama.posteosU[i].piePost %></p>
                         </a>
                 </article>
             </section>
