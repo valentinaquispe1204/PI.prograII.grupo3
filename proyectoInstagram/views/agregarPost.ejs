@@ -1,9 +1,18 @@
 <%- include('./partials/head.ejs') %>
+<<<<<<< HEAD
 <% if (locals.user != undefined) { %>
     <%- include('./partials/headerLogueado.ejs') %>
 <% } else { %>
     <%- include('./partials/header.ejs') %>
 <% }  %> 
+=======
+
+    <% if (locals.user != undefined) { %>
+        <%- include('./partials/headerLogueado.ejs') %>
+    <% } else { %>
+        <%- include('./partials/header.ejs') %>
+    <% }  %> 
+>>>>>>> 3876534ffe5243b6ed8cb07f047430f860ebfbbb
 
 
 <main>
@@ -17,8 +26,8 @@
             <form class="form" method="POST" action="/products/agregarPost"  >
                 <div class="form-item">
                     
-                    <input type="text"	name="cover" placeholder="url de la imagen"> 
-                    <input type="text" name="description" placeholder="pie de post"> <br>
+                    <input type="text"	name="cover" placeholder="url de la imagen" required> <br>
+                    <input type="text" name="description" placeholder="ingrese un pie de post"> <br>
                    
                     
                 </div>

@@ -16,14 +16,19 @@ const productsControllers = {
       piePost: req.body.description,
       idUsuario: req.session.user.id,
     }
+    if (req.session.user != undefined) {
+       posteos.create(data)
 
-    posteos.create(data)
       .then((resultados) => {
         return res.redirect("/");
       })
       .catch(function (error) {
         return res.send(error)
       });
+
+    } else {
+      return res.render("login")
+    }
   },
 
   // borrarPost: function (req, res) {
@@ -44,14 +49,8 @@ const productsControllers = {
     let id = req.params.id
     let relacion = {
       include: [
-        {
-          association: "usersP"
-        },
-        {
-          association: "comentariosP", include: [
-            { association: "usersC" }
-          ]
-        }
+        {association: "usersP"},
+        {association: "comentariosP", include: [{ association: "usersC" }]}
     ]
   };
   posteos.findByPk(id, relacion)

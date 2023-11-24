@@ -9,12 +9,12 @@ const controlador = {
     posteos.findAll({
       include:[
         {association: "usersP"},
-        {association:"comentariosP", include: {association: "usersC"}}
-      ]
+        {association:"comentariosP", include: [{association: "usersC"}]}
+      ],
+      order: ["updatedAt", "DESC"] //chequear si funciona
     })
       .then((resultados) => {
         //  return res.send(resultados)
-
 
         return res.render('index', { grama: resultados });
       }).catch(function(error) {

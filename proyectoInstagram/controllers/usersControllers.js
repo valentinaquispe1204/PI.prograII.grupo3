@@ -72,20 +72,21 @@ const userControllers = {
   //para procesar metodo POST de login
   procesarLogin: function (req, res) {
     let emailBuscado = req.body.username;
-    let pass2 = req.body.password;
+    let pass = req.body.password;
     let rememberme = req.body.rememberme;
-    let errores = {};
+    // let errores = {};
     let criterio = {
       where: [{ email: emailBuscado }]
     };
 
         grama.Users.findOne(criterio)
             .then((result) => {
-
+              
                 if (result != null) {
-                    let claveCorrecta = bcrypt.compareSync(pass2, result.pass)
-                    if (claveCorrecta) {
+                    let claveCorrecta = bcrypt.compareSync(result.pass, pass) //PORQUEEEEEEE ME DA FALSEEEEEE
+                    // return res.send(claveCorrecta)
 
+                    if (claveCorrecta) {
                         req.session.user = {
                             id: result.idUsuario,
                             arroba: result.arroba,
@@ -94,7 +95,7 @@ const userControllers = {
                         }
                         
                         if (req.body.rememberme != undefined) {
-                            res.cookie('usuarioId', result.idUsuario, { maxAge: 1000 * 60 * 15 })
+                            res.cookie('idUsuario', result.idUsuario, { maxAge: 1000 * 60 * 15 })
                         }
                         return res.redirect("/");
                     } else {
@@ -113,7 +114,7 @@ const userControllers = {
     
   logout: (req, res) => {
       req.session.destroy();// Eliminar la sesión del usuario y redireccionar a la página de inicio de sesión
-      res.clearCookie('usuarioId');
+      res.clearCookie('idUsuario');
       res.redirect('/');
   },
 
@@ -147,13 +148,18 @@ const userControllers = {
 
   },
   registracion: function (req, res) {
-    return res.render('registracion');
+    if (req.session.user != undefined) {
+      return res.redirect("/")
+  } else {
+      return res.render('registracion')
+  }
   },
+
   //para procesar metodo POST de registracion
   procesarRegistracion: function (req, res) {
     let data = {
       arroba: req.body.username,
-      pass: bcrypt.hashSync(req.body.password, 10),
+      pass: bcrypt.hashSync(req.body.password),
       fotoDePerfil: req.body.img,
       fecha: req.body.date,
       dni: req.body.dni,
@@ -164,7 +170,7 @@ const userControllers = {
       .then((result) => {
         return res.redirect("/users/login");
       }).catch((error) => {
-        return console.log(error);
+        return res.send(error);
       });
   }
 }

@@ -1,12 +1,14 @@
 <%- include('./partials/head.ejs') %>
-    
-        <main>
-            
-            <% if (locals.user != undefined) { %>
+
+
+     <% if (locals.user != undefined) { %>
                 <%- include('./partials/headerLogueado.ejs') %>
             <% } else { %>
                 <%- include('./partials/header.ejs') %>
             <% }  %> 
+
+
+        <main>
 
             <section class="center main-content">
                 <% if (locals.user!=undefined) { %>
@@ -47,6 +49,11 @@
 
                             <h4>Comentarios</h4>
                             <ul>
+<<<<<<< HEAD
+=======
+                                
+                             
+>>>>>>> 3876534ffe5243b6ed8cb07f047430f860ebfbbb
 
                                 <% if (grama[i].comentariosP != 0) { %>
                                     <li>
