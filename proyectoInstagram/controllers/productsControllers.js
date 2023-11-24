@@ -16,7 +16,6 @@ const productsControllers = {
       piePost: req.body.description,
       idUsuario: req.session.user.id,
     }
-    if (req.session.user != undefined) {
        posteos.create(data)
 
       .then((resultados) => {
@@ -26,9 +25,6 @@ const productsControllers = {
         return res.send(error)
       });
 
-    } else {
-      return res.render("login")
-    }
   },
 
   // borrarPost: function (req, res) {
@@ -68,9 +64,8 @@ const productsControllers = {
     let data = {
       textoComentario: req.body.comment,
       idPosteo: 1,
-      idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
+      idUsuario: req.session.user.id // despues cambiarlo x el usuario que esta loggeado
     }
-    
   },
 
 }
