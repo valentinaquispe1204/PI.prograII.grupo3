@@ -83,7 +83,7 @@ const userControllers = {
             .then((result) => {
               
                 if (result != null) {
-                    let claveCorrecta = bcrypt.compareSync(result.pass, pass) //PORQUEEEEEEE ME DA FALSEEEEEE
+                    let claveCorrecta = bcrypt.compareSync(pass, result.pass) //PORQUEEEEEEE ME DA FALSEEEEEE
                     // return res.send(claveCorrecta)
 
                     if (claveCorrecta) {

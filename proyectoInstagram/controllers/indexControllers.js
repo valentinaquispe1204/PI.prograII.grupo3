@@ -11,7 +11,7 @@ const controlador = {
         {association: "usersP"},
         {association:"comentariosP", include: [{association: "usersC"}]}
       ],
-      order: ["updatedAt", "DESC"] //chequear si funciona
+      // order: ["updatedAt", "DESC"] //chequear si funciona
     })
       .then((resultados) => {
         //  return res.send(resultados)
