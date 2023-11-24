@@ -16,6 +16,7 @@ const userControllers = {
         // return res.send(resultadosDetalleU)
 
 
+
         return res.render('detalleUsuario', { grama: resultadosDetalleU });
       })
       .catch(function (error) {
@@ -33,14 +34,28 @@ const userControllers = {
 
   //para procesar metodo POST de editarPerfil
   procesarPerfil: function (req, res) {
-    let data = {
-      arroba: req.body.username,
-      pass: req.body.password,
+    console.log("funca")
+    if (req.session.user != undefined){
+    let actualizacion =  
+    { arroba: req.body.username,
       fotoDePerfil: req.body.img,
       fecha: req.body.date,
       dni: req.body.dni,
       email: req.body.email
+    };
+    if (req.body.password != ""){
+      actualizacion.pass =  bcrypt.hashSync(req.body.password, 10)
     }
+    grama.usuario.update({actualizacion
+    },{where: {
+        idUsuario: req.session.user.id}
+    })
+    .then((result) => {
+      return res.redirect("/users/miPerfil/" + req.params.id);
+    }).catch((error) => {
+      return console.log(error);
+    });
+  }
   },
 
 
@@ -115,10 +130,11 @@ const userControllers = {
 
     usuarios.findByPk(id, relacion)
       .then(function (usuario) {
+        // return res.send(usuario)
 
         if (usuario != null) {
-          // return res.send(usuario)
-          res.render('miPerfil', { grama: result});
+          
+          res.render('miPerfil', { grama: usuario});
           let check = bcrypt.compareSync(pass, result.pass) //devuekve un bool
 
         } else {

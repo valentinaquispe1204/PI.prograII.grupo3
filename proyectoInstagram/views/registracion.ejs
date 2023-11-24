@@ -1,5 +1,9 @@
 <%- include('./partials/head.ejs') %>
-<%- include('./partials/header.ejs') %>
+<% if (locals.user != undefined) { %>
+  <%- include('./partials/headerLogueado.ejs') %>
+<% } else { %>
+  <%- include('./partials/header.ejs') %>
+<% }  %> 
 
 <!-- Aca va el codigo -->
 <main>

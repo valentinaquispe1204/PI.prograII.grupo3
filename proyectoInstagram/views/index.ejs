@@ -47,16 +47,15 @@
 
                             <h4>Comentarios</h4>
                             <ul>
-                                <li>
-                                    <a href="/users/detalleUsuario/<%= grama[i].comentariosP.idUsuario %>">
-                                        <%=grama[i].comentariosP[0].usersC.arroba %></a>
-                                    <span><%=grama[i].comentariosP[0].textoComentario%></span>
-                                </li>
-                             
-                                   
-                             
-                                
 
+                                <% if (grama[i].comentariosP != 0) { %>
+                                    <li>
+                                        <a href="/users/detalleUsuario/<%= grama[i].comentariosP.idUsuario %>">
+                                            <%=grama[i].comentariosP[0].usersC.arroba %></a>
+                                        <span><%=grama[i].comentariosP[0].textoComentario%></span>
+                                    </li>
+                                <% } %>
+                                
                                 <a href="/products/detallePost/<%= grama[i].idPosteo%>">Ver más...</a>
                             </ul>
                         </div>

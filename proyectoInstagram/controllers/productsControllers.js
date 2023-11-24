@@ -10,15 +10,15 @@ const productsControllers = {
   //  procesar el metodo POST de agregarPost
   procesarAgregarPost: function (req, res) {
 
+  
     let data = {
       nombreImagen: req.body.cover,
       piePost: req.body.description,
-      idUsuario: 1 // despues cambiarlo x el usuario que esta loggeado
+      idUsuario: req.session.user.id,
     }
 
     posteos.create(data)
       .then((resultados) => {
-
         return res.redirect("/");
       })
       .catch(function (error) {
@@ -26,6 +26,19 @@ const productsControllers = {
       });
   },
 
+  // borrarPost: function (req, res) {
+  //   let id = Number(req.params.id);
+  //   let criterio = {
+  //     where: [{ id_posteo: id }]
+  //   }
+  //   datos.Posteo.destroy(criterio)
+  //     .then(function (result) {                                      //si no hacemos esto borrarlo
+  //       return res.redirect('/')
+  //     })
+  //     .catch(function (error) {
+  //       res.send(error)
+  //     })
+  // 
 
   detallePost: function (req, res, next) {
     let id = req.params.id
