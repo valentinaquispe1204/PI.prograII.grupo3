@@ -8,6 +8,10 @@ router.get('/agregarPost',productsControllers.agregarPost);
 router.post('/agregarPost',productsControllers.procesarAgregarPost);
 
 router.get('/detallePost/:id',productsControllers.detallePost);
-router.post('/detallePost/:id',productsControllers.procesarDetallePost);
+router.post('/comentario/:id',productsControllers.procesarDetallePost);
+
+
+
+
 
 module.exports = router;

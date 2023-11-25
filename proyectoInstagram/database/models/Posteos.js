@@ -16,6 +16,9 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING
                
         },
+        idUsuario:{
+            type: dataTypes.INTEGER
+        },
         createdAt: {
             type: dataTypes.DATE
         },
