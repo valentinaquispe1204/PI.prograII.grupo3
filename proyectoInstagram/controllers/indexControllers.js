@@ -46,16 +46,4 @@ const controlador = {
 
 
 
-
-
-/* 
-const controlador = { 
-  index: function (req, res, next) { 
-    res.render('index', { grama: grama.posteos });
-  },
-  resultadoBusqueda: function (req, res, next) {                                         
-    res.render('resultadoBusqueda', { grama: grama.posteos })
-  },
-}
-*/
 module.exports = controlador; 
