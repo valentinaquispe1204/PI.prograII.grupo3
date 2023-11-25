@@ -11,7 +11,7 @@
             <section class="center main-content">
                 <h1>Editar perfil</h1>
                 <p>Modifique sus datos!</p>
-                <form class="form" method="POST" action="/users/miPerfil/<%= locals.user.id %>">
+                <form class="form" method="POST" action="/users/miPerfil/<%= Number(locals.user.id) %>">
                     <div class="form-item">
                         
                         <input type="text"      name="username" placeholder="Nuevo nombre de usuario" value="<%= usuarios.arroba %>"> <br>

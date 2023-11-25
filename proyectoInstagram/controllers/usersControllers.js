@@ -46,7 +46,7 @@ const userControllers = {
           })
   },
   procesarPerfil: function (req, res) {
-    let id = req.params.id;
+    let id = Number(req.params.id);
     let data = req.body;
     let criterio = {
       where: [{
