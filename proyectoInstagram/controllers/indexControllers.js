@@ -23,30 +23,34 @@ const controlador = {
 
   resultadoBusqueda: function (req, res, next) {       
     const datosABuscar =  req.query.busqueda;
+    // res.send(datosABuscar)
+
     posteos.findAll({
       where: [
-        {piePost: {[op.like]: `%${datosABuscar}%`}}
+        {piePost: {[op.like]: "%" + datosABuscar + "%" }}
       ], 
+      order: [
+        ["piePost", "ASC"]
+      ],
       include: {
         all: true,
         nested: true
-      },
-      order: [
-        ["piePost", "DESC"]
-      ],
-      limit: 10,
+      }
+      
     }).then(function(datosEncontrados) {
-      return res.send(datosEncontrados)
-      return res.render('resultadoBusqueda', { grama: datosEncontrados })
+      // return res.send(datosEncontrados)
+      if (datosEncontrados == 0) {
+        
+        return res.render('resultadoBusqueda', { grama: datosEncontrados })
+      } else {
+        
+        return res.render('resultadoBusqueda', { grama: datosEncontrados })
+
+      }
+      
     }).catch(function(error) {
       return res.send(error)
     });
-
-
-    //para buscar un usuario
-    let usuarioABuscar = req.query.busqueda;´
-
-    
   },
 }
 

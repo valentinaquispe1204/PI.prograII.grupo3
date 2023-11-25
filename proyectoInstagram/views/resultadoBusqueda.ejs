@@ -8,15 +8,19 @@
 <main>
     <section class="center main-content">
     <h1>Resultados de búsqueda.</h1>
+   <% if (grama.length == 0) { %>
+    <p>NO HAY RESULTADOS PARA TU BUSQUEDA</p>
+   <% } else { %>
+     
     <% for( let i=0; i < grama.length; i++ ) { %> 
             <article class="post">
                 <div class="info-usuario">
-                    <img src="<%= grama[i].fotoPerfil %>" alt="">
-                    <a href="/users/detalleUsuario/<%= grama[i].arroba %>"><%= grama[i].arroba %></a>
+                    <img src="/images/fotosPerfil/<%= grama[i].usersP.fotoDePerfil %>" alt="">
+                    <a href="/users/detalleUsuario/<%= grama[i].usersP.arroba %>"><%= grama[i].usersP.arroba %></a>
                 </div>
                 <div class="post-body">
                     <a href="/products/detallePost/<%= grama[i].idPosteo %>">
-                    <img src="<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
+                    <img src="/images/<%= grama[i].nombreImagen %>" alt="<%=grama[i].piePost %>">
                 </div>
                 <ul class="post-reacciones"> 
                     <li>
@@ -27,11 +31,11 @@
                     </li>           
                 </ul>
                 <div class="post-comentarios">
-                    <a href="<%=grama[i].arroba %>"><%= grama[i].piePost %></a>
+                    <a href="<%=grama[i].usersP.arroba %>"><%= grama[i].piePost %></a>
                         <h4>Comentarios</h4>
                         <ul>
                             <li>
-                                <a href="/users/detalleUsuario/<%= grama[i].arroba %>"><%=grama[i].arroba %></a>
+                                <a href="/users/detalleUsuario/<%= grama[i].usersP.comentariosU.idUsuario %>"><%=grama[i].usersP.arroba %></a>
                                 <span><%= grama[i].piePost %></span>
                             </li>
 
@@ -40,7 +44,8 @@
                 </div>
             </article>
      <% } %> 
-
+     <% } %> 
+     
     </section>
    
 </main>
