@@ -25,16 +25,6 @@ const userControllers = {
       })
   },
 
-  // editarPerfil: function (req, res) {
-  //   if (req.session.user == undefined) {
-  //     return res.redirect("/")
-  //   } else {
-  //     return res.render('editarPerfil', { grama: grama });
-  //   }
-  // },
-
-  //para procesar metodo POST de editarPerfil
-
   editarPerfil: (req, res) => {
     let id = Number(req.params.id);
         usuarios.findByPk(id)
@@ -55,50 +45,21 @@ const userControllers = {
     };
     let actualizacion= {
       arroba: data.username,
-      // pass : bcrypt.hashSync(data.password, 10),
-      // fotoDePerfil: data.img,
-      // fecha: data.date,
-      // dni: data.dni,
-      // email: data.email
-    
+      pass : bcrypt.hashSync(data.password, 10),
+      fotoDePerfil: data.img,
+      fecha: data.date,
+      dni: data.dni,
+      email: data.email,
+      createdAt: new Date(),
     }
     usuarios.update(actualizacion, criterio)
     .then(function (result) {
-      return res.redirect("/")
+      return res.redirect("/users/miPerfil/"+ id)
     })
     .catch(function (error) {
       res.send(error)
     })
 },
-  // procesarPerfil: (req, res) => {
-  //   grama.Users.update(req.body, { where: { id: req.params.id } })
-  //     console.log("funca")
-  // if (req.session.user != undefined) {
-  //   let actualizacion =
-  //   {
-  //     arroba: req.body.username,
-  //     fotoDePerfil: req.body.img,
-  //     fecha: req.body.date,
-  //     dni: req.body.dni,
-  //     email: req.body.email
-  //   };
-  //   if (req.body.password != "") {
-  //     actualizacion.pass = bcrypt.hashSync(req.body.password, 10)
-  //   }
-  //   grama.usuario.update({
-  //     actualizacion
-  //   },)
-  //     .then((result) => {
-  //       return res.redirect("/users/miPerfil/");
-  //     }).catch((error) => {
-  //       return console.log(error);
-  //     });
-  // }
-  //   },
-  //desde aca sacar
-  
-//sacar arriba
-
 
 
 login: function (req, res, next) {
@@ -200,7 +161,8 @@ procesarRegistracion: function (req, res) {
     fecha: req.body.date,
     dni: req.body.dni,
     email: req.body.email,
-    rememberToken: "false"
+    rememberToken: "false",
+    
   };
   grama.Users.create(data)
     .then((result) => {

@@ -27,16 +27,26 @@ const controlador = {
       where: [
         {piePost: {[op.like]: `%${datosABuscar}%`}}
       ], 
+      include: {
+        all: true,
+        nested: true
+      },
       order: [
-        ["piePost", "ASC"]
+        ["piePost", "DESC"]
       ],
-      limit: 10
-// si sobra tiempo, agregar busqueda tb para perfiles de usuarios asi queda mas cool je
+      limit: 10,
     }).then(function(datosEncontrados) {
+      return res.send(datosEncontrados)
       return res.render('resultadoBusqueda', { grama: datosEncontrados })
     }).catch(function(error) {
       return res.send(error)
     });
+
+
+    //para buscar un usuario
+    let usuarioABuscar = req.query.busqueda;´
+
+    
   },
 }
 
@@ -44,18 +54,4 @@ const controlador = {
 
 
 
-
-
-
-
-/* 
-const controlador = { 
-  index: function (req, res, next) { 
-    res.render('index', { grama: grama.posteos });
-  },
-  resultadoBusqueda: function (req, res, next) {                                         
-    res.render('resultadoBusqueda', { grama: grama.posteos })
-  },
-}
-*/
 module.exports = controlador; 
