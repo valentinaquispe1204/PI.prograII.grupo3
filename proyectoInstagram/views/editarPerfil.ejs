@@ -11,15 +11,15 @@
             <section class="center main-content">
                 <h1>Editar perfil</h1>
                 <p>Modifique sus datos!</p>
-                <form class="form" method="POST" action="/users/miPerfil">
+                <form class="form" method="POST" action="/users/miPerfil/<%= locals.user.id %>">
                     <div class="form-item">
                         
-                        <input type="text"      name="username" placeholder="Nuevo nombre de usuario"> <br>
-                        <input type="password"  name="password" placeholder="Nueva contraseña"> <br>
-                        <input type="file"      name="img"      placeholder="Editar foto de Perfil"> <br>
-                        <input type="date"      name="date"     placeholder="Editar fecha de nacimiento"> <br>
-                        <input type="text"      name="dni"      placeholder="Editar documento"> <br>
-                        <input type="text"      name="email"    placeholder="Editar email"> <br> <!--chequear luego si hay q agregar cosas del email en otros lados-->
+                        <input type="text"      name="username" placeholder="Nuevo nombre de usuario" value="<%= usuarios.arroba %>"> <br>
+                        <!-- <input type="password"  name="password" placeholder="Nueva contraseña"  value="2222"> <br>
+                        <input type="file"      name="img"      placeholder="Editar foto de Perfil"  value="<%= usuarios.fotoDePerfil %>"> <br>
+                        <input type="date"      name="date"     placeholder="Editar fecha de nacimiento"  value="<%= usuarios.fecha %>"> <br>
+                        <input type="text"      name="dni"      placeholder="Editar documento"  value="<%= usuarios.dni %>"> <br>
+                        <input type="text"      name="email"    placeholder="Editar email"  value="<%= usuarios.email %>"> <br> chequear luego si hay q agregar cosas del email en otros lados -->
                     </div>
                     <div class="button-panel">
                         <input type="submit" class="button" title="Sign In" value="Guardar cambios"></input>

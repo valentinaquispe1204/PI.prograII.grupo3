@@ -42,6 +42,7 @@ const productsControllers = {
   // 
 
   detallePost: function (req, res, next) {
+    
     let id = req.params.id
     let relacion = {
       include: [
@@ -61,14 +62,38 @@ const productsControllers = {
 
   //para procesar metodo POST de detallePost
   procesarDetallePost: function (req, res, next) {
-    let data = {
-      textoComentario: req.body.comment,
-      idPosteo: 1,
-      idUsuario: req.session.user.id // despues cambiarlo x el usuario que esta loggeado
-    }
-  },
+    if (req.session.user == undefined) {
+      return res.redirect('/login')
+    } else {
+      let coment = req.body.comment;
+      let posteoId = req.params.id;
+      let data = {
+        textoComentario : coment,
+        idPosteo : posteoId,
+        idUsuario : req.session.user.id,
+      } 
+      grama.Comentarios.create(data)
+    
+      .then(function (result) {
+        
+        return res.redirect('/products/detallePost/'+ posteoId);
+      })
+      .catch(function (error) {
+        res.send(error)
+      })
+    }}
+  }
+   
 
-}
+    
+    
+    
+   
+  
+
+
+  
+
 
 module.exports = productsControllers;
 

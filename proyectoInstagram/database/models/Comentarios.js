@@ -11,6 +11,12 @@ module.exports = function(sequelize, dataTypes) {
         textoComentario: {
             type: dataTypes.STRING(400)
         },
+        idPosteo:{
+            type: dataTypes.INTEGER
+        },
+        idUsuario:{
+            type: dataTypes.INTEGER
+        },
         createdAt: {
             type: dataTypes.DATE
         },

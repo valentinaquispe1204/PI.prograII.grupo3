@@ -21,7 +21,7 @@
             <section class="right">
                 <h4>Comentarios</h4>
                 <section class="comments">
-                    <form class="comment-form" method="post" action="/">
+                    <form class="comment-form" method="POST">
                         <input type="text" name="comment" class="input" placeholder="Agregar comentario">
                         <button type="submit">Comentar!</button>
                     </form>
@@ -29,7 +29,7 @@
                       
                     <!-- borramos el .length pq tiraba error pero desp vemos -->
                     <% if (grama.comentariosP != 0) { %>
-                     <% for( let i = 0; i < 4 ; i++ ) { %>
+                     <% for( let i = 0; i < grama.comentariosP.length ; i++ ) { %>
                     <article class="comment">
                             <img src="/images/fotosPerfil/<%= grama.comentariosP[i].usersC.fotoDePerfil%>" alt=""> 
                             <section class="content">

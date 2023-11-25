@@ -8,8 +8,8 @@ los nombres de las rutas pueden ser iguales y no va a ver  conflicto pq estan us
 
 router.get('/detalleUsuario/:id', userControllers.detalleUsuario); //no tiene form asi que no hay ruta post?
 
-router.get('/editarPerfil', userControllers.editarPerfil);
-router.post('/editarPerfil', userControllers.procesarPerfil);
+router.get('/editarPerfil/:id', userControllers.editarPerfil);
+router.post('/editarPerfil/:id', userControllers.procesarPerfil);
 
 router.get('/login', userControllers.login);
 router.post('/login', userControllers.procesarLogin); 
@@ -20,6 +20,8 @@ router.get('/miPerfil/:id', userControllers.miPerfil); //no tiene form asi que n
 
 router.get('/registracion', userControllers.registracion);
 router.post('/registracion', userControllers.procesarRegistracion);
+
+
 
 
 
